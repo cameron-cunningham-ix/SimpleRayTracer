@@ -1,0 +1,4 @@
+/build/
+/images/
+/third_party/SDL2/build/
+/third_party/SDL2/CMakeLists.txt.user
