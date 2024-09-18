@@ -19,7 +19,7 @@ public:
     int samples_per_pixel = 10;  // Count of random samples per pixel
     int max_depth = 10;          // Maximum number of ray bounces into scene
 
-    double vfov = 90;   // Vertical view angle (field of view)
+    double vfov = 90;                   // Vertical view angle (field of view)
     Point3 lookfrom = Point3(0,0,0);    // Point camera is looking from
     Point3 lookat = Point3(0,0,-1);     // Point camera is looking to
     Vec3 vup = Vec3(0,1,0);             // Camera-relative "up" direction
@@ -29,7 +29,6 @@ public:
 
     void render(const Hittable& world, SDL_Surface* surface) {
         initialize();  // Initialize camera settings like position, orientation, etc.
-
 
         // Lambda function to render a single row (or scanline) of the image.
         // This will be executed in parallel by different threads.
@@ -48,7 +47,7 @@ public:
 
                 // Scale the pixel color based on the number of samples and write it to the SDL surface
                 Uint32* pixels = (Uint32*)surface->pixels;
-                pixels[(image_height - 1 - j) * image_width + i] = SDL_MapRGB(surface->format,
+                pixels[j * image_width + i] = SDL_MapRGB(surface->format,
                     static_cast<Uint8>(255.999 * pixel_samples_scale * pixel_color.x()),
                     static_cast<Uint8>(255.999 * pixel_samples_scale * pixel_color.y()),
                     static_cast<Uint8>(255.999 * pixel_samples_scale * pixel_color.z()));

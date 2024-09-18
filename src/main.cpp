@@ -39,8 +39,8 @@ int main(int argc, char* argv[]) {
 
     cam.aspect_ratio = 16.0 / 9.0;
     cam.image_width = 800;
-    cam.samples_per_pixel = 200;
-    cam.max_depth = 30;
+    cam.samples_per_pixel = 50;
+    cam.max_depth = 10;
 
     cam.vfov = 45;
     cam.lookfrom = Point3(-2,2,1);

@@ -1,0 +1,1611 @@
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeDetermineSystem.cmake:205 (message)"
+      - "CMakeLists.txt:9 (project)"
+    message: |
+      The system is: Windows - 10.0.22631 - AMD64
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:9 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler:  
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      MSBuild version 17.11.2+c078802d4 for .NET Framework
+      Build started 9/18/2024 8:35:58 AM.
+      
+      Project "C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\3.29.6\\CompilerIdC\\CompilerIdC.vcxproj" on node 1 (default targets).
+      PrepareForBuild:
+        Creating directory "Debug\\".
+        Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+        Creating directory "Debug\\CompilerIdC.tlog\\".
+      InitializeBuildStatus:
+        Creating "Debug\\CompilerIdC.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+        Touching "Debug\\CompilerIdC.tlog\\unsuccessfulbuild".
+      ClCompile:
+        C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\HostX64\\x64\\CL.exe /c /nologo /W0 /WX- /diagnostics:column /Od /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\\\" /Fd"Debug\\vc143.pdb" /external:W0 /Gd /TC /FC /errorReport:queue CMakeCCompilerId.c
+        CMakeCCompilerId.c
+      Link:
+        C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:".\\CompilerIdC.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\\CompilerIdC.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\\CompilerIdC.lib" /MACHINE:X64 Debug\\CMakeCCompilerId.obj
+        CompilerIdC.vcxproj -> C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\3.29.6\\CompilerIdC\\CompilerIdC.exe
+      PostBuildEvent:
+        for %%i in (cl.exe) do @echo CMAKE_C_COMPILER=%%~$PATH:i
+        :VCEnd
+        CMAKE_C_COMPILER=C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe
+      FinalizeBuildStatus:
+        Deleting file "Debug\\CompilerIdC.tlog\\unsuccessfulbuild".
+        Touching "Debug\\CompilerIdC.tlog\\CompilerIdC.lastbuildstate".
+      Done Building Project "C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\3.29.6\\CompilerIdC\\CompilerIdC.vcxproj" (default targets).
+      
+      Build succeeded.
+          0 Warning(s)
+          0 Error(s)
+      
+      Time Elapsed 00:00:00.93
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.exe"
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.vcxproj"
+      
+      The C compiler identification is MSVC, found in:
+        C:/Users/bluej/Documents/GitHub/SimpleRayTracer/third_party/SDL2/build/CMakeFiles/3.29.6/CompilerIdC/CompilerIdC.exe
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:9 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler:  
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      MSBuild version 17.11.2+c078802d4 for .NET Framework
+      Build started 9/18/2024 8:35:59 AM.
+      
+      Project "C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\3.29.6\\CompilerIdCXX\\CompilerIdCXX.vcxproj" on node 1 (default targets).
+      PrepareForBuild:
+        Creating directory "Debug\\".
+        Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+        Creating directory "Debug\\CompilerIdCXX.tlog\\".
+      InitializeBuildStatus:
+        Creating "Debug\\CompilerIdCXX.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+        Touching "Debug\\CompilerIdCXX.tlog\\unsuccessfulbuild".
+      ClCompile:
+        C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\HostX64\\x64\\CL.exe /c /nologo /W0 /WX- /diagnostics:column /Od /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\\\" /Fd"Debug\\vc143.pdb" /external:W0 /Gd /TP /FC /errorReport:queue CMakeCXXCompilerId.cpp
+        CMakeCXXCompilerId.cpp
+      Link:
+        C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:".\\CompilerIdCXX.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\\CompilerIdCXX.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\\CompilerIdCXX.lib" /MACHINE:X64 Debug\\CMakeCXXCompilerId.obj
+        CompilerIdCXX.vcxproj -> C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\3.29.6\\CompilerIdCXX\\CompilerIdCXX.exe
+      PostBuildEvent:
+        for %%i in (cl.exe) do @echo CMAKE_CXX_COMPILER=%%~$PATH:i
+        :VCEnd
+        CMAKE_CXX_COMPILER=C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\Hostx64\\x64\\cl.exe
+      FinalizeBuildStatus:
+        Deleting file "Debug\\CompilerIdCXX.tlog\\unsuccessfulbuild".
+        Touching "Debug\\CompilerIdCXX.tlog\\CompilerIdCXX.lastbuildstate".
+      Done Building Project "C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\3.29.6\\CompilerIdCXX\\CompilerIdCXX.vcxproj" (default targets).
+      
+      Build succeeded.
+          0 Warning(s)
+          0 Error(s)
+      
+      Time Elapsed 00:00:00.82
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.exe"
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.vcxproj"
+      
+      The CXX compiler identification is MSVC, found in:
+        C:/Users/bluej/Documents/GitHub/SimpleRayTracer/third_party/SDL2/build/CMakeFiles/3.29.6/CompilerIdCXX/CompilerIdCXX.exe
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCompilerABI.cmake:67 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:9 (project)"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "C:/Users/bluej/Documents/GitHub/SimpleRayTracer/third_party/SDL2/build/CMakeFiles/CMakeScratch/TryCompile-wm7faa"
+      binary: "C:/Users/bluej/Documents/GitHub/SimpleRayTracer/third_party/SDL2/build/CMakeFiles/CMakeScratch/TryCompile-wm7faa"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/bluej/Documents/GitHub/SimpleRayTracer/third_party/SDL2/build/CMakeFiles/CMakeScratch/TryCompile-wm7faa'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_7dd8b.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild version 17.11.2+c078802d4 for .NET Framework
+        Build started 9/18/2024 8:36:01 AM.
+        
+        Project "C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-wm7faa\\cmTC_7dd8b.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Creating directory "cmTC_7dd8b.dir\\Debug\\".
+          Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+          Creating directory "C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-wm7faa\\Debug\\".
+          Creating directory "cmTC_7dd8b.dir\\Debug\\cmTC_7dd8b.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_7dd8b.dir\\Debug\\cmTC_7dd8b.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_7dd8b.dir\\Debug\\cmTC_7dd8b.tlog\\unsuccessfulbuild".
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_7dd8b.dir\\Debug\\\\" /Fd"cmTC_7dd8b.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.29\\Modules\\CMakeCCompilerABI.c"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.41.34120 for x64
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_7dd8b.dir\\Debug\\\\" /Fd"cmTC_7dd8b.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.29\\Modules\\CMakeCCompilerABI.c"
+          CMakeCCompilerABI.c
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-wm7faa\\Debug\\cmTC_7dd8b.exe" /INCREMENTAL /ILK:"cmTC_7dd8b.dir\\Debug\\cmTC_7dd8b.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/bluej/Documents/GitHub/SimpleRayTracer/third_party/SDL2/build/CMakeFiles/CMakeScratch/TryCompile-wm7faa/Debug/cmTC_7dd8b.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/bluej/Documents/GitHub/SimpleRayTracer/third_party/SDL2/build/CMakeFiles/CMakeScratch/TryCompile-wm7faa/Debug/cmTC_7dd8b.lib" /MACHINE:X64  /machine:x64 cmTC_7dd8b.dir\\Debug\\CMakeCCompilerABI.obj
+          cmTC_7dd8b.vcxproj -> C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-wm7faa\\Debug\\cmTC_7dd8b.exe
+        FinalizeBuildStatus:
+          Deleting file "cmTC_7dd8b.dir\\Debug\\cmTC_7dd8b.tlog\\unsuccessfulbuild".
+          Touching "cmTC_7dd8b.dir\\Debug\\cmTC_7dd8b.tlog\\cmTC_7dd8b.lastbuildstate".
+        Done Building Project "C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-wm7faa\\cmTC_7dd8b.vcxproj" (default targets).
+        
+        Build succeeded.
+            0 Warning(s)
+            0 Error(s)
+        
+        Time Elapsed 00:00:00.78
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCompilerABI.cmake:173 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:9 (project)"
+    message: |
+      Parsed C implicit link information:
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(\\.[a-z]+)?|link\\.exe|lld-link(\\.exe)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(\\.[a-z]+)?|link\\.exe|lld-link(\\.exe)?))("|,| |$)]
+        linker tool for 'C': C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.41.34120/bin/HostX64/x64/link.exe
+        implicit libs: []
+        implicit objs: []
+        implicit dirs: []
+        implicit fwks: []
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/Internal/CMakeDetermineLinkerId.cmake:40 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCompilerABI.cmake:210 (cmake_determine_linker_id)"
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:9 (project)"
+    message: |
+      Running the C compiler's linker: "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.41.34120/bin/HostX64/x64/link.exe" "-v"
+      Microsoft (R) Incremental Linker Version 14.41.34120.0
+      Copyright (C) Microsoft Corporation.  All rights reserved.
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCompilerABI.cmake:67 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:9 (project)"
+    checks:
+      - "Detecting CXX compiler ABI info"
+    directories:
+      source: "C:/Users/bluej/Documents/GitHub/SimpleRayTracer/third_party/SDL2/build/CMakeFiles/CMakeScratch/TryCompile-b492bh"
+      binary: "C:/Users/bluej/Documents/GitHub/SimpleRayTracer/third_party/SDL2/build/CMakeFiles/CMakeScratch/TryCompile-b492bh"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /W3 /GR /EHsc"
+      CMAKE_CXX_SCAN_FOR_MODULES: "OFF"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+    buildResult:
+      variable: "CMAKE_CXX_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/bluej/Documents/GitHub/SimpleRayTracer/third_party/SDL2/build/CMakeFiles/CMakeScratch/TryCompile-b492bh'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_df471.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild version 17.11.2+c078802d4 for .NET Framework
+        Build started 9/18/2024 8:36:02 AM.
+        
+        Project "C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-b492bh\\cmTC_df471.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Creating directory "cmTC_df471.dir\\Debug\\".
+          Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+          Creating directory "C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-b492bh\\Debug\\".
+          Creating directory "cmTC_df471.dir\\Debug\\cmTC_df471.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_df471.dir\\Debug\\cmTC_df471.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_df471.dir\\Debug\\cmTC_df471.tlog\\unsuccessfulbuild".
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_df471.dir\\Debug\\\\" /Fd"cmTC_df471.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.29\\Modules\\CMakeCXXCompilerABI.cpp"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.41.34120 for x64
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_df471.dir\\Debug\\\\" /Fd"cmTC_df471.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-3.29\\Modules\\CMakeCXXCompilerABI.cpp"
+          CMakeCXXCompilerABI.cpp
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-b492bh\\Debug\\cmTC_df471.exe" /INCREMENTAL /ILK:"cmTC_df471.dir\\Debug\\cmTC_df471.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/bluej/Documents/GitHub/SimpleRayTracer/third_party/SDL2/build/CMakeFiles/CMakeScratch/TryCompile-b492bh/Debug/cmTC_df471.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/bluej/Documents/GitHub/SimpleRayTracer/third_party/SDL2/build/CMakeFiles/CMakeScratch/TryCompile-b492bh/Debug/cmTC_df471.lib" /MACHINE:X64  /machine:x64 cmTC_df471.dir\\Debug\\CMakeCXXCompilerABI.obj
+          cmTC_df471.vcxproj -> C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-b492bh\\Debug\\cmTC_df471.exe
+        FinalizeBuildStatus:
+          Deleting file "cmTC_df471.dir\\Debug\\cmTC_df471.tlog\\unsuccessfulbuild".
+          Touching "cmTC_df471.dir\\Debug\\cmTC_df471.tlog\\cmTC_df471.lastbuildstate".
+        Done Building Project "C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-b492bh\\cmTC_df471.vcxproj" (default targets).
+        
+        Build succeeded.
+            0 Warning(s)
+            0 Error(s)
+        
+        Time Elapsed 00:00:00.78
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCompilerABI.cmake:173 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:9 (project)"
+    message: |
+      Parsed CXX implicit link information:
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(\\.[a-z]+)?|link\\.exe|lld-link(\\.exe)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(\\.[a-z]+)?|link\\.exe|lld-link(\\.exe)?))("|,| |$)]
+        linker tool for 'CXX': C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.41.34120/bin/HostX64/x64/link.exe
+        implicit libs: []
+        implicit objs: []
+        implicit dirs: []
+        implicit fwks: []
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/Internal/CMakeDetermineLinkerId.cmake:40 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCompilerABI.cmake:210 (cmake_determine_linker_id)"
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:9 (project)"
+    message: |
+      Running the CXX compiler's linker: "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.41.34120/bin/HostX64/x64/link.exe" "-v"
+      Microsoft (R) Incremental Linker Version 14.41.34120.0
+      Copyright (C) Microsoft Corporation.  All rights reserved.
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CheckSymbolExists.cmake:140 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CheckSymbolExists.cmake:66 (__CHECK_SYMBOL_EXISTS_IMPL)"
+      - "CMakeLists.txt:82 (check_symbol_exists)"
+    checks:
+      - "Looking for __GLIBC__"
+    directories:
+      source: "C:/Users/bluej/Documents/GitHub/SimpleRayTracer/third_party/SDL2/build/CMakeFiles/CMakeScratch/TryCompile-2u5foc"
+      binary: "C:/Users/bluej/Documents/GitHub/SimpleRayTracer/third_party/SDL2/build/CMakeFiles/CMakeScratch/TryCompile-2u5foc"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/Users/bluej/Documents/GitHub/SimpleRayTracer/third_party/SDL2/cmake"
+    buildResult:
+      variable: "LIBC_IS_GLIBC"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/bluej/Documents/GitHub/SimpleRayTracer/third_party/SDL2/build/CMakeFiles/CMakeScratch/TryCompile-2u5foc'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_e2158.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild version 17.11.2+c078802d4 for .NET Framework
+        Build started 9/18/2024 8:36:04 AM.
+        
+        Project "C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-2u5foc\\cmTC_e2158.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Creating directory "cmTC_e2158.dir\\Debug\\".
+          Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+          Creating directory "C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-2u5foc\\Debug\\".
+          Creating directory "cmTC_e2158.dir\\Debug\\cmTC_e2158.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_e2158.dir\\Debug\\cmTC_e2158.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_e2158.dir\\Debug\\cmTC_e2158.tlog\\unsuccessfulbuild".
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_e2158.dir\\Debug\\\\" /Fd"cmTC_e2158.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-2u5foc\\CheckSymbolExists.c"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.41.34120 for x64
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_e2158.dir\\Debug\\\\" /Fd"cmTC_e2158.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-2u5foc\\CheckSymbolExists.c"
+          CheckSymbolExists.c
+        C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-2u5foc\\CheckSymbolExists.c(8,19): error C2065: '__GLIBC__': undeclared identifier [C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-2u5foc\\cmTC_e2158.vcxproj]
+        Done Building Project "C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-2u5foc\\cmTC_e2158.vcxproj" (default targets) -- FAILED.
+        
+        Build FAILED.
+        
+        "C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-2u5foc\\cmTC_e2158.vcxproj" (default target) (1) ->
+        (ClCompile target) -> 
+          C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-2u5foc\\CheckSymbolExists.c(8,19): error C2065: '__GLIBC__': undeclared identifier [C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-2u5foc\\cmTC_e2158.vcxproj]
+        
+            0 Warning(s)
+            1 Error(s)
+        
+        Time Elapsed 00:00:00.46
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CheckCSourceCompiles.cmake:52 (cmake_check_source_compiles)"
+      - "cmake/CheckCPUArchitecture.cmake:17 (check_c_source_compiles)"
+      - "cmake/CheckCPUArchitecture.cmake:28 (_internal_check_cpu_architecture)"
+      - "CMakeLists.txt:139 (check_cpu_architecture)"
+    checks:
+      - "Performing Test CHECK_CPU_ARCHITECTURE_X86"
+    directories:
+      source: "C:/Users/bluej/Documents/GitHub/SimpleRayTracer/third_party/SDL2/build/CMakeFiles/CMakeScratch/TryCompile-0d7h5o"
+      binary: "C:/Users/bluej/Documents/GitHub/SimpleRayTracer/third_party/SDL2/build/CMakeFiles/CMakeScratch/TryCompile-0d7h5o"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/Users/bluej/Documents/GitHub/SimpleRayTracer/third_party/SDL2/cmake"
+    buildResult:
+      variable: "CHECK_CPU_ARCHITECTURE_X86"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/bluej/Documents/GitHub/SimpleRayTracer/third_party/SDL2/build/CMakeFiles/CMakeScratch/TryCompile-0d7h5o'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_a13f4.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild version 17.11.2+c078802d4 for .NET Framework
+        Build started 9/18/2024 8:36:04 AM.
+        
+        Project "C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-0d7h5o\\cmTC_a13f4.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Creating directory "cmTC_a13f4.dir\\Debug\\".
+          Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+          Creating directory "C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-0d7h5o\\Debug\\".
+          Creating directory "cmTC_a13f4.dir\\Debug\\cmTC_a13f4.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_a13f4.dir\\Debug\\cmTC_a13f4.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_a13f4.dir\\Debug\\cmTC_a13f4.tlog\\unsuccessfulbuild".
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_CPU_ARCHITECTURE_X86 /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_a13f4.dir\\Debug\\\\" /Fd"cmTC_a13f4.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-0d7h5o\\src.c"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.41.34120 for x64
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_CPU_ARCHITECTURE_X86 /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_a13f4.dir\\Debug\\\\" /Fd"cmTC_a13f4.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-0d7h5o\\src.c"
+          src.c
+        C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-0d7h5o\\src.c(6,3): error C2065: 'choke': undeclared identifier [C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-0d7h5o\\cmTC_a13f4.vcxproj]
+        C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-0d7h5o\\src.c(8,1): error C2143: syntax error: missing ';' before '}' [C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-0d7h5o\\cmTC_a13f4.vcxproj]
+        Done Building Project "C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-0d7h5o\\cmTC_a13f4.vcxproj" (default targets) -- FAILED.
+        
+        Build FAILED.
+        
+        "C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-0d7h5o\\cmTC_a13f4.vcxproj" (default target) (1) ->
+        (ClCompile target) -> 
+          C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-0d7h5o\\src.c(6,3): error C2065: 'choke': undeclared identifier [C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-0d7h5o\\cmTC_a13f4.vcxproj]
+          C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-0d7h5o\\src.c(8,1): error C2143: syntax error: missing ';' before '}' [C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-0d7h5o\\cmTC_a13f4.vcxproj]
+        
+            0 Warning(s)
+            2 Error(s)
+        
+        Time Elapsed 00:00:00.48
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CheckCSourceCompiles.cmake:52 (cmake_check_source_compiles)"
+      - "cmake/CheckCPUArchitecture.cmake:17 (check_c_source_compiles)"
+      - "cmake/CheckCPUArchitecture.cmake:30 (_internal_check_cpu_architecture)"
+      - "CMakeLists.txt:140 (check_cpu_architecture)"
+    checks:
+      - "Performing Test CHECK_CPU_ARCHITECTURE_X64"
+    directories:
+      source: "C:/Users/bluej/Documents/GitHub/SimpleRayTracer/third_party/SDL2/build/CMakeFiles/CMakeScratch/TryCompile-rdsbh7"
+      binary: "C:/Users/bluej/Documents/GitHub/SimpleRayTracer/third_party/SDL2/build/CMakeFiles/CMakeScratch/TryCompile-rdsbh7"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/Users/bluej/Documents/GitHub/SimpleRayTracer/third_party/SDL2/cmake"
+    buildResult:
+      variable: "CHECK_CPU_ARCHITECTURE_X64"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/bluej/Documents/GitHub/SimpleRayTracer/third_party/SDL2/build/CMakeFiles/CMakeScratch/TryCompile-rdsbh7'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_737fd.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild version 17.11.2+c078802d4 for .NET Framework
+        Build started 9/18/2024 8:36:05 AM.
+        
+        Project "C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-rdsbh7\\cmTC_737fd.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Creating directory "cmTC_737fd.dir\\Debug\\".
+          Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+          Creating directory "C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-rdsbh7\\Debug\\".
+          Creating directory "cmTC_737fd.dir\\Debug\\cmTC_737fd.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_737fd.dir\\Debug\\cmTC_737fd.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_737fd.dir\\Debug\\cmTC_737fd.tlog\\unsuccessfulbuild".
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_CPU_ARCHITECTURE_X64 /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_737fd.dir\\Debug\\\\" /Fd"cmTC_737fd.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-rdsbh7\\src.c"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.41.34120 for x64
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_CPU_ARCHITECTURE_X64 /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_737fd.dir\\Debug\\\\" /Fd"cmTC_737fd.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-rdsbh7\\src.c"
+          src.c
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-rdsbh7\\Debug\\cmTC_737fd.exe" /INCREMENTAL /ILK:"cmTC_737fd.dir\\Debug\\cmTC_737fd.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/bluej/Documents/GitHub/SimpleRayTracer/third_party/SDL2/build/CMakeFiles/CMakeScratch/TryCompile-rdsbh7/Debug/cmTC_737fd.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/bluej/Documents/GitHub/SimpleRayTracer/third_party/SDL2/build/CMakeFiles/CMakeScratch/TryCompile-rdsbh7/Debug/cmTC_737fd.lib" /MACHINE:X64  /machine:x64 cmTC_737fd.dir\\Debug\\src.obj
+          cmTC_737fd.vcxproj -> C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-rdsbh7\\Debug\\cmTC_737fd.exe
+        FinalizeBuildStatus:
+          Deleting file "cmTC_737fd.dir\\Debug\\cmTC_737fd.tlog\\unsuccessfulbuild".
+          Touching "cmTC_737fd.dir\\Debug\\cmTC_737fd.tlog\\cmTC_737fd.lastbuildstate".
+        Done Building Project "C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-rdsbh7\\cmTC_737fd.vcxproj" (default targets).
+        
+        Build succeeded.
+            0 Warning(s)
+            0 Error(s)
+        
+        Time Elapsed 00:00:00.72
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CheckCSourceCompiles.cmake:52 (cmake_check_source_compiles)"
+      - "cmake/CheckCPUArchitecture.cmake:17 (check_c_source_compiles)"
+      - "cmake/CheckCPUArchitecture.cmake:32 (_internal_check_cpu_architecture)"
+      - "CMakeLists.txt:141 (check_cpu_architecture)"
+    checks:
+      - "Performing Test CHECK_CPU_ARCHITECTURE_ARM32"
+    directories:
+      source: "C:/Users/bluej/Documents/GitHub/SimpleRayTracer/third_party/SDL2/build/CMakeFiles/CMakeScratch/TryCompile-q8ivpq"
+      binary: "C:/Users/bluej/Documents/GitHub/SimpleRayTracer/third_party/SDL2/build/CMakeFiles/CMakeScratch/TryCompile-q8ivpq"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/Users/bluej/Documents/GitHub/SimpleRayTracer/third_party/SDL2/cmake"
+    buildResult:
+      variable: "CHECK_CPU_ARCHITECTURE_ARM32"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/bluej/Documents/GitHub/SimpleRayTracer/third_party/SDL2/build/CMakeFiles/CMakeScratch/TryCompile-q8ivpq'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_2cee3.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild version 17.11.2+c078802d4 for .NET Framework
+        Build started 9/18/2024 8:36:07 AM.
+        
+        Project "C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-q8ivpq\\cmTC_2cee3.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Creating directory "cmTC_2cee3.dir\\Debug\\".
+          Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+          Creating directory "C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-q8ivpq\\Debug\\".
+          Creating directory "cmTC_2cee3.dir\\Debug\\cmTC_2cee3.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_2cee3.dir\\Debug\\cmTC_2cee3.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_2cee3.dir\\Debug\\cmTC_2cee3.tlog\\unsuccessfulbuild".
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_CPU_ARCHITECTURE_ARM32 /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_2cee3.dir\\Debug\\\\" /Fd"cmTC_2cee3.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-q8ivpq\\src.c"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.41.34120 for x64
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_CPU_ARCHITECTURE_ARM32 /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_2cee3.dir\\Debug\\\\" /Fd"cmTC_2cee3.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-q8ivpq\\src.c"
+          src.c
+        C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-q8ivpq\\src.c(6,3): error C2065: 'choke': undeclared identifier [C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-q8ivpq\\cmTC_2cee3.vcxproj]
+        C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-q8ivpq\\src.c(8,1): error C2143: syntax error: missing ';' before '}' [C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-q8ivpq\\cmTC_2cee3.vcxproj]
+        Done Building Project "C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-q8ivpq\\cmTC_2cee3.vcxproj" (default targets) -- FAILED.
+        
+        Build FAILED.
+        
+        "C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-q8ivpq\\cmTC_2cee3.vcxproj" (default target) (1) ->
+        (ClCompile target) -> 
+          C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-q8ivpq\\src.c(6,3): error C2065: 'choke': undeclared identifier [C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-q8ivpq\\cmTC_2cee3.vcxproj]
+          C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-q8ivpq\\src.c(8,1): error C2143: syntax error: missing ';' before '}' [C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-q8ivpq\\cmTC_2cee3.vcxproj]
+        
+            0 Warning(s)
+            2 Error(s)
+        
+        Time Elapsed 00:00:00.53
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CheckCSourceCompiles.cmake:52 (cmake_check_source_compiles)"
+      - "cmake/CheckCPUArchitecture.cmake:17 (check_c_source_compiles)"
+      - "cmake/CheckCPUArchitecture.cmake:34 (_internal_check_cpu_architecture)"
+      - "CMakeLists.txt:142 (check_cpu_architecture)"
+    checks:
+      - "Performing Test CHECK_CPU_ARCHITECTURE_ARM64"
+    directories:
+      source: "C:/Users/bluej/Documents/GitHub/SimpleRayTracer/third_party/SDL2/build/CMakeFiles/CMakeScratch/TryCompile-6m6a5p"
+      binary: "C:/Users/bluej/Documents/GitHub/SimpleRayTracer/third_party/SDL2/build/CMakeFiles/CMakeScratch/TryCompile-6m6a5p"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/Users/bluej/Documents/GitHub/SimpleRayTracer/third_party/SDL2/cmake"
+    buildResult:
+      variable: "CHECK_CPU_ARCHITECTURE_ARM64"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/bluej/Documents/GitHub/SimpleRayTracer/third_party/SDL2/build/CMakeFiles/CMakeScratch/TryCompile-6m6a5p'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_362de.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild version 17.11.2+c078802d4 for .NET Framework
+        Build started 9/18/2024 8:36:08 AM.
+        
+        Project "C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-6m6a5p\\cmTC_362de.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Creating directory "cmTC_362de.dir\\Debug\\".
+          Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+          Creating directory "C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-6m6a5p\\Debug\\".
+          Creating directory "cmTC_362de.dir\\Debug\\cmTC_362de.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_362de.dir\\Debug\\cmTC_362de.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_362de.dir\\Debug\\cmTC_362de.tlog\\unsuccessfulbuild".
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_CPU_ARCHITECTURE_ARM64 /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_362de.dir\\Debug\\\\" /Fd"cmTC_362de.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-6m6a5p\\src.c"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.41.34120 for x64
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_CPU_ARCHITECTURE_ARM64 /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_362de.dir\\Debug\\\\" /Fd"cmTC_362de.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-6m6a5p\\src.c"
+          src.c
+        C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-6m6a5p\\src.c(6,3): error C2065: 'choke': undeclared identifier [C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-6m6a5p\\cmTC_362de.vcxproj]
+        C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-6m6a5p\\src.c(8,1): error C2143: syntax error: missing ';' before '}' [C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-6m6a5p\\cmTC_362de.vcxproj]
+        Done Building Project "C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-6m6a5p\\cmTC_362de.vcxproj" (default targets) -- FAILED.
+        
+        Build FAILED.
+        
+        "C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-6m6a5p\\cmTC_362de.vcxproj" (default target) (1) ->
+        (ClCompile target) -> 
+          C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-6m6a5p\\src.c(6,3): error C2065: 'choke': undeclared identifier [C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-6m6a5p\\cmTC_362de.vcxproj]
+          C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-6m6a5p\\src.c(8,1): error C2143: syntax error: missing ';' before '}' [C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-6m6a5p\\cmTC_362de.vcxproj]
+        
+            0 Warning(s)
+            2 Error(s)
+        
+        Time Elapsed 00:00:00.48
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CheckCSourceCompiles.cmake:52 (cmake_check_source_compiles)"
+      - "cmake/CheckCPUArchitecture.cmake:17 (check_c_source_compiles)"
+      - "cmake/CheckCPUArchitecture.cmake:36 (_internal_check_cpu_architecture)"
+      - "CMakeLists.txt:143 (check_cpu_architecture)"
+    checks:
+      - "Performing Test CHECK_CPU_ARCHITECTURE_LOONGARCH64"
+    directories:
+      source: "C:/Users/bluej/Documents/GitHub/SimpleRayTracer/third_party/SDL2/build/CMakeFiles/CMakeScratch/TryCompile-gz3ji0"
+      binary: "C:/Users/bluej/Documents/GitHub/SimpleRayTracer/third_party/SDL2/build/CMakeFiles/CMakeScratch/TryCompile-gz3ji0"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/Users/bluej/Documents/GitHub/SimpleRayTracer/third_party/SDL2/cmake"
+    buildResult:
+      variable: "CHECK_CPU_ARCHITECTURE_LOONGARCH64"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/bluej/Documents/GitHub/SimpleRayTracer/third_party/SDL2/build/CMakeFiles/CMakeScratch/TryCompile-gz3ji0'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_4a223.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild version 17.11.2+c078802d4 for .NET Framework
+        Build started 9/18/2024 8:36:09 AM.
+        
+        Project "C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-gz3ji0\\cmTC_4a223.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Creating directory "cmTC_4a223.dir\\Debug\\".
+          Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+          Creating directory "C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-gz3ji0\\Debug\\".
+          Creating directory "cmTC_4a223.dir\\Debug\\cmTC_4a223.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_4a223.dir\\Debug\\cmTC_4a223.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_4a223.dir\\Debug\\cmTC_4a223.tlog\\unsuccessfulbuild".
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_CPU_ARCHITECTURE_LOONGARCH64 /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_4a223.dir\\Debug\\\\" /Fd"cmTC_4a223.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-gz3ji0\\src.c"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.41.34120 for x64
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_CPU_ARCHITECTURE_LOONGARCH64 /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_4a223.dir\\Debug\\\\" /Fd"cmTC_4a223.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-gz3ji0\\src.c"
+          src.c
+        C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-gz3ji0\\src.c(6,3): error C2065: 'choke': undeclared identifier [C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-gz3ji0\\cmTC_4a223.vcxproj]
+        C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-gz3ji0\\src.c(8,1): error C2143: syntax error: missing ';' before '}' [C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-gz3ji0\\cmTC_4a223.vcxproj]
+        Done Building Project "C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-gz3ji0\\cmTC_4a223.vcxproj" (default targets) -- FAILED.
+        
+        Build FAILED.
+        
+        "C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-gz3ji0\\cmTC_4a223.vcxproj" (default target) (1) ->
+        (ClCompile target) -> 
+          C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-gz3ji0\\src.c(6,3): error C2065: 'choke': undeclared identifier [C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-gz3ji0\\cmTC_4a223.vcxproj]
+          C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-gz3ji0\\src.c(8,1): error C2143: syntax error: missing ';' before '}' [C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-gz3ji0\\cmTC_4a223.vcxproj]
+        
+            0 Warning(s)
+            2 Error(s)
+        
+        Time Elapsed 00:00:00.53
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CheckIncludeFile.cmake:90 (try_compile)"
+      - "CMakeLists.txt:1003 (check_include_file)"
+    checks:
+      - "Looking for immintrin.h"
+    directories:
+      source: "C:/Users/bluej/Documents/GitHub/SimpleRayTracer/third_party/SDL2/build/CMakeFiles/CMakeScratch/TryCompile-tdfyad"
+      binary: "C:/Users/bluej/Documents/GitHub/SimpleRayTracer/third_party/SDL2/build/CMakeFiles/CMakeScratch/TryCompile-tdfyad"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/Users/bluej/Documents/GitHub/SimpleRayTracer/third_party/SDL2/cmake"
+    buildResult:
+      variable: "HAVE_IMMINTRIN_H"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/bluej/Documents/GitHub/SimpleRayTracer/third_party/SDL2/build/CMakeFiles/CMakeScratch/TryCompile-tdfyad'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_f4f2d.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild version 17.11.2+c078802d4 for .NET Framework
+        Build started 9/18/2024 8:36:10 AM.
+        
+        Project "C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-tdfyad\\cmTC_f4f2d.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Creating directory "cmTC_f4f2d.dir\\Debug\\".
+          Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+          Creating directory "C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-tdfyad\\Debug\\".
+          Creating directory "cmTC_f4f2d.dir\\Debug\\cmTC_f4f2d.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_f4f2d.dir\\Debug\\cmTC_f4f2d.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_f4f2d.dir\\Debug\\cmTC_f4f2d.tlog\\unsuccessfulbuild".
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _GNU_SOURCE=1 /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_f4f2d.dir\\Debug\\\\" /Fd"cmTC_f4f2d.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-tdfyad\\CheckIncludeFile.c"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.41.34120 for x64
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _GNU_SOURCE=1 /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_f4f2d.dir\\Debug\\\\" /Fd"cmTC_f4f2d.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-tdfyad\\CheckIncludeFile.c"
+          CheckIncludeFile.c
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-tdfyad\\Debug\\cmTC_f4f2d.exe" /INCREMENTAL /ILK:"cmTC_f4f2d.dir\\Debug\\cmTC_f4f2d.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/bluej/Documents/GitHub/SimpleRayTracer/third_party/SDL2/build/CMakeFiles/CMakeScratch/TryCompile-tdfyad/Debug/cmTC_f4f2d.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/bluej/Documents/GitHub/SimpleRayTracer/third_party/SDL2/build/CMakeFiles/CMakeScratch/TryCompile-tdfyad/Debug/cmTC_f4f2d.lib" /MACHINE:X64  /machine:x64 cmTC_f4f2d.dir\\Debug\\CheckIncludeFile.obj
+          cmTC_f4f2d.vcxproj -> C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-tdfyad\\Debug\\cmTC_f4f2d.exe
+        FinalizeBuildStatus:
+          Deleting file "cmTC_f4f2d.dir\\Debug\\cmTC_f4f2d.tlog\\unsuccessfulbuild".
+          Touching "cmTC_f4f2d.dir\\Debug\\cmTC_f4f2d.tlog\\cmTC_f4f2d.lastbuildstate".
+        Done Building Project "C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-tdfyad\\cmTC_f4f2d.vcxproj" (default targets).
+        
+        Build succeeded.
+            0 Warning(s)
+            0 Error(s)
+        
+        Time Elapsed 00:00:00.81
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CheckIncludeFile.cmake:90 (try_compile)"
+      - "CMakeLists.txt:1166 (check_include_file)"
+    checks:
+      - "Looking for stdint.h"
+    directories:
+      source: "C:/Users/bluej/Documents/GitHub/SimpleRayTracer/third_party/SDL2/build/CMakeFiles/CMakeScratch/TryCompile-0mndns"
+      binary: "C:/Users/bluej/Documents/GitHub/SimpleRayTracer/third_party/SDL2/build/CMakeFiles/CMakeScratch/TryCompile-0mndns"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/Users/bluej/Documents/GitHub/SimpleRayTracer/third_party/SDL2/cmake"
+    buildResult:
+      variable: "HAVE_STDINT_H"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/bluej/Documents/GitHub/SimpleRayTracer/third_party/SDL2/build/CMakeFiles/CMakeScratch/TryCompile-0mndns'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_2096c.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild version 17.11.2+c078802d4 for .NET Framework
+        Build started 9/18/2024 8:36:11 AM.
+        
+        Project "C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-0mndns\\cmTC_2096c.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Creating directory "cmTC_2096c.dir\\Debug\\".
+          Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+          Creating directory "C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-0mndns\\Debug\\".
+          Creating directory "cmTC_2096c.dir\\Debug\\cmTC_2096c.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_2096c.dir\\Debug\\cmTC_2096c.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_2096c.dir\\Debug\\cmTC_2096c.tlog\\unsuccessfulbuild".
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _GNU_SOURCE=1 /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_2096c.dir\\Debug\\\\" /Fd"cmTC_2096c.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-0mndns\\CheckIncludeFile.c"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.41.34120 for x64
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _GNU_SOURCE=1 /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_2096c.dir\\Debug\\\\" /Fd"cmTC_2096c.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-0mndns\\CheckIncludeFile.c"
+          CheckIncludeFile.c
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-0mndns\\Debug\\cmTC_2096c.exe" /INCREMENTAL /ILK:"cmTC_2096c.dir\\Debug\\cmTC_2096c.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/bluej/Documents/GitHub/SimpleRayTracer/third_party/SDL2/build/CMakeFiles/CMakeScratch/TryCompile-0mndns/Debug/cmTC_2096c.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/bluej/Documents/GitHub/SimpleRayTracer/third_party/SDL2/build/CMakeFiles/CMakeScratch/TryCompile-0mndns/Debug/cmTC_2096c.lib" /MACHINE:X64  /machine:x64 cmTC_2096c.dir\\Debug\\CheckIncludeFile.obj
+          cmTC_2096c.vcxproj -> C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-0mndns\\Debug\\cmTC_2096c.exe
+        FinalizeBuildStatus:
+          Deleting file "cmTC_2096c.dir\\Debug\\cmTC_2096c.tlog\\unsuccessfulbuild".
+          Touching "cmTC_2096c.dir\\Debug\\cmTC_2096c.tlog\\cmTC_2096c.lastbuildstate".
+        Done Building Project "C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-0mndns\\cmTC_2096c.vcxproj" (default targets).
+        
+        Build succeeded.
+            0 Warning(s)
+            0 Error(s)
+        
+        Time Elapsed 00:00:00.89
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CheckCSourceCompiles.cmake:52 (cmake_check_source_compiles)"
+      - "CMakeLists.txt:1768 (check_c_source_compiles)"
+    checks:
+      - "Performing Test HAVE_WIN32_CC"
+    directories:
+      source: "C:/Users/bluej/Documents/GitHub/SimpleRayTracer/third_party/SDL2/build/CMakeFiles/CMakeScratch/TryCompile-bmvduw"
+      binary: "C:/Users/bluej/Documents/GitHub/SimpleRayTracer/third_party/SDL2/build/CMakeFiles/CMakeScratch/TryCompile-bmvduw"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/Users/bluej/Documents/GitHub/SimpleRayTracer/third_party/SDL2/cmake"
+    buildResult:
+      variable: "HAVE_WIN32_CC"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/bluej/Documents/GitHub/SimpleRayTracer/third_party/SDL2/build/CMakeFiles/CMakeScratch/TryCompile-bmvduw'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_67eaf.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild version 17.11.2+c078802d4 for .NET Framework
+        Build started 9/18/2024 8:36:12 AM.
+        
+        Project "C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-bmvduw\\cmTC_67eaf.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Creating directory "cmTC_67eaf.dir\\Debug\\".
+          Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+          Creating directory "C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-bmvduw\\Debug\\".
+          Creating directory "cmTC_67eaf.dir\\Debug\\cmTC_67eaf.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_67eaf.dir\\Debug\\cmTC_67eaf.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_67eaf.dir\\Debug\\cmTC_67eaf.tlog\\unsuccessfulbuild".
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _GNU_SOURCE=1 /D HAVE_WIN32_CC /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_67eaf.dir\\Debug\\\\" /Fd"cmTC_67eaf.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-bmvduw\\src.c"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.41.34120 for x64
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _GNU_SOURCE=1 /D HAVE_WIN32_CC /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_67eaf.dir\\Debug\\\\" /Fd"cmTC_67eaf.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-bmvduw\\src.c"
+          src.c
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-bmvduw\\Debug\\cmTC_67eaf.exe" /INCREMENTAL /ILK:"cmTC_67eaf.dir\\Debug\\cmTC_67eaf.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/bluej/Documents/GitHub/SimpleRayTracer/third_party/SDL2/build/CMakeFiles/CMakeScratch/TryCompile-bmvduw/Debug/cmTC_67eaf.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/bluej/Documents/GitHub/SimpleRayTracer/third_party/SDL2/build/CMakeFiles/CMakeScratch/TryCompile-bmvduw/Debug/cmTC_67eaf.lib" /MACHINE:X64  /machine:x64 cmTC_67eaf.dir\\Debug\\src.obj
+          cmTC_67eaf.vcxproj -> C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-bmvduw\\Debug\\cmTC_67eaf.exe
+        FinalizeBuildStatus:
+          Deleting file "cmTC_67eaf.dir\\Debug\\cmTC_67eaf.tlog\\unsuccessfulbuild".
+          Touching "cmTC_67eaf.dir\\Debug\\cmTC_67eaf.tlog\\cmTC_67eaf.lastbuildstate".
+        Done Building Project "C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-bmvduw\\cmTC_67eaf.vcxproj" (default targets).
+        
+        Build succeeded.
+            0 Warning(s)
+            0 Error(s)
+        
+        Time Elapsed 00:00:01.10
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CheckIncludeFile.cmake:90 (try_compile)"
+      - "CMakeLists.txt:1802 (check_include_file)"
+    checks:
+      - "Looking for d3d9.h"
+    directories:
+      source: "C:/Users/bluej/Documents/GitHub/SimpleRayTracer/third_party/SDL2/build/CMakeFiles/CMakeScratch/TryCompile-iuwrlz"
+      binary: "C:/Users/bluej/Documents/GitHub/SimpleRayTracer/third_party/SDL2/build/CMakeFiles/CMakeScratch/TryCompile-iuwrlz"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/Users/bluej/Documents/GitHub/SimpleRayTracer/third_party/SDL2/cmake"
+    buildResult:
+      variable: "HAVE_D3D_H"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/bluej/Documents/GitHub/SimpleRayTracer/third_party/SDL2/build/CMakeFiles/CMakeScratch/TryCompile-iuwrlz'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_40e70.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild version 17.11.2+c078802d4 for .NET Framework
+        Build started 9/18/2024 8:36:14 AM.
+        
+        Project "C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-iuwrlz\\cmTC_40e70.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Creating directory "cmTC_40e70.dir\\Debug\\".
+          Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+          Creating directory "C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-iuwrlz\\Debug\\".
+          Creating directory "cmTC_40e70.dir\\Debug\\cmTC_40e70.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_40e70.dir\\Debug\\cmTC_40e70.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_40e70.dir\\Debug\\cmTC_40e70.tlog\\unsuccessfulbuild".
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _GNU_SOURCE=1 /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_40e70.dir\\Debug\\\\" /Fd"cmTC_40e70.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-iuwrlz\\CheckIncludeFile.c"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.41.34120 for x64
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _GNU_SOURCE=1 /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_40e70.dir\\Debug\\\\" /Fd"cmTC_40e70.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-iuwrlz\\CheckIncludeFile.c"
+          CheckIncludeFile.c
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-iuwrlz\\Debug\\cmTC_40e70.exe" /INCREMENTAL /ILK:"cmTC_40e70.dir\\Debug\\cmTC_40e70.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/bluej/Documents/GitHub/SimpleRayTracer/third_party/SDL2/build/CMakeFiles/CMakeScratch/TryCompile-iuwrlz/Debug/cmTC_40e70.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/bluej/Documents/GitHub/SimpleRayTracer/third_party/SDL2/build/CMakeFiles/CMakeScratch/TryCompile-iuwrlz/Debug/cmTC_40e70.lib" /MACHINE:X64  /machine:x64 cmTC_40e70.dir\\Debug\\CheckIncludeFile.obj
+          cmTC_40e70.vcxproj -> C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-iuwrlz\\Debug\\cmTC_40e70.exe
+        FinalizeBuildStatus:
+          Deleting file "cmTC_40e70.dir\\Debug\\cmTC_40e70.tlog\\unsuccessfulbuild".
+          Touching "cmTC_40e70.dir\\Debug\\cmTC_40e70.tlog\\cmTC_40e70.lastbuildstate".
+        Done Building Project "C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-iuwrlz\\cmTC_40e70.vcxproj" (default targets).
+        
+        Build succeeded.
+            0 Warning(s)
+            0 Error(s)
+        
+        Time Elapsed 00:00:01.17
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CheckIncludeFile.cmake:90 (try_compile)"
+      - "CMakeLists.txt:1803 (check_include_file)"
+    checks:
+      - "Looking for d3d11_1.h"
+    directories:
+      source: "C:/Users/bluej/Documents/GitHub/SimpleRayTracer/third_party/SDL2/build/CMakeFiles/CMakeScratch/TryCompile-zrk1nw"
+      binary: "C:/Users/bluej/Documents/GitHub/SimpleRayTracer/third_party/SDL2/build/CMakeFiles/CMakeScratch/TryCompile-zrk1nw"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/Users/bluej/Documents/GitHub/SimpleRayTracer/third_party/SDL2/cmake"
+    buildResult:
+      variable: "HAVE_D3D11_H"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/bluej/Documents/GitHub/SimpleRayTracer/third_party/SDL2/build/CMakeFiles/CMakeScratch/TryCompile-zrk1nw'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_0c13d.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild version 17.11.2+c078802d4 for .NET Framework
+        Build started 9/18/2024 8:36:15 AM.
+        
+        Project "C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-zrk1nw\\cmTC_0c13d.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Creating directory "cmTC_0c13d.dir\\Debug\\".
+          Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+          Creating directory "C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-zrk1nw\\Debug\\".
+          Creating directory "cmTC_0c13d.dir\\Debug\\cmTC_0c13d.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_0c13d.dir\\Debug\\cmTC_0c13d.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_0c13d.dir\\Debug\\cmTC_0c13d.tlog\\unsuccessfulbuild".
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _GNU_SOURCE=1 /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_0c13d.dir\\Debug\\\\" /Fd"cmTC_0c13d.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-zrk1nw\\CheckIncludeFile.c"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.41.34120 for x64
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _GNU_SOURCE=1 /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_0c13d.dir\\Debug\\\\" /Fd"cmTC_0c13d.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-zrk1nw\\CheckIncludeFile.c"
+          CheckIncludeFile.c
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-zrk1nw\\Debug\\cmTC_0c13d.exe" /INCREMENTAL /ILK:"cmTC_0c13d.dir\\Debug\\cmTC_0c13d.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/bluej/Documents/GitHub/SimpleRayTracer/third_party/SDL2/build/CMakeFiles/CMakeScratch/TryCompile-zrk1nw/Debug/cmTC_0c13d.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/bluej/Documents/GitHub/SimpleRayTracer/third_party/SDL2/build/CMakeFiles/CMakeScratch/TryCompile-zrk1nw/Debug/cmTC_0c13d.lib" /MACHINE:X64  /machine:x64 cmTC_0c13d.dir\\Debug\\CheckIncludeFile.obj
+          cmTC_0c13d.vcxproj -> C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-zrk1nw\\Debug\\cmTC_0c13d.exe
+        FinalizeBuildStatus:
+          Deleting file "cmTC_0c13d.dir\\Debug\\cmTC_0c13d.tlog\\unsuccessfulbuild".
+          Touching "cmTC_0c13d.dir\\Debug\\cmTC_0c13d.tlog\\cmTC_0c13d.lastbuildstate".
+        Done Building Project "C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-zrk1nw\\cmTC_0c13d.vcxproj" (default targets).
+        
+        Build succeeded.
+            0 Warning(s)
+            0 Error(s)
+        
+        Time Elapsed 00:00:01.14
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CheckCSourceCompiles.cmake:52 (cmake_check_source_compiles)"
+      - "CMakeLists.txt:1804 (check_c_source_compiles)"
+    checks:
+      - "Performing Test HAVE_D3D12_H"
+    directories:
+      source: "C:/Users/bluej/Documents/GitHub/SimpleRayTracer/third_party/SDL2/build/CMakeFiles/CMakeScratch/TryCompile-6hahoi"
+      binary: "C:/Users/bluej/Documents/GitHub/SimpleRayTracer/third_party/SDL2/build/CMakeFiles/CMakeScratch/TryCompile-6hahoi"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/Users/bluej/Documents/GitHub/SimpleRayTracer/third_party/SDL2/cmake"
+    buildResult:
+      variable: "HAVE_D3D12_H"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/bluej/Documents/GitHub/SimpleRayTracer/third_party/SDL2/build/CMakeFiles/CMakeScratch/TryCompile-6hahoi'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_1e314.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild version 17.11.2+c078802d4 for .NET Framework
+        Build started 9/18/2024 8:36:17 AM.
+        
+        Project "C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-6hahoi\\cmTC_1e314.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Creating directory "cmTC_1e314.dir\\Debug\\".
+          Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+          Creating directory "C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-6hahoi\\Debug\\".
+          Creating directory "cmTC_1e314.dir\\Debug\\cmTC_1e314.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_1e314.dir\\Debug\\cmTC_1e314.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_1e314.dir\\Debug\\cmTC_1e314.tlog\\unsuccessfulbuild".
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _GNU_SOURCE=1 /D HAVE_D3D12_H /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_1e314.dir\\Debug\\\\" /Fd"cmTC_1e314.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-6hahoi\\src.c"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.41.34120 for x64
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _GNU_SOURCE=1 /D HAVE_D3D12_H /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_1e314.dir\\Debug\\\\" /Fd"cmTC_1e314.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-6hahoi\\src.c"
+          src.c
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-6hahoi\\Debug\\cmTC_1e314.exe" /INCREMENTAL /ILK:"cmTC_1e314.dir\\Debug\\cmTC_1e314.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/bluej/Documents/GitHub/SimpleRayTracer/third_party/SDL2/build/CMakeFiles/CMakeScratch/TryCompile-6hahoi/Debug/cmTC_1e314.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/bluej/Documents/GitHub/SimpleRayTracer/third_party/SDL2/build/CMakeFiles/CMakeScratch/TryCompile-6hahoi/Debug/cmTC_1e314.lib" /MACHINE:X64  /machine:x64 cmTC_1e314.dir\\Debug\\src.obj
+          cmTC_1e314.vcxproj -> C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-6hahoi\\Debug\\cmTC_1e314.exe
+        FinalizeBuildStatus:
+          Deleting file "cmTC_1e314.dir\\Debug\\cmTC_1e314.tlog\\unsuccessfulbuild".
+          Touching "cmTC_1e314.dir\\Debug\\cmTC_1e314.tlog\\cmTC_1e314.lastbuildstate".
+        Done Building Project "C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-6hahoi\\cmTC_1e314.vcxproj" (default targets).
+        
+        Build succeeded.
+            0 Warning(s)
+            0 Error(s)
+        
+        Time Elapsed 00:00:01.09
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CheckIncludeFile.cmake:90 (try_compile)"
+      - "CMakeLists.txt:1810 (check_include_file)"
+    checks:
+      - "Looking for ddraw.h"
+    directories:
+      source: "C:/Users/bluej/Documents/GitHub/SimpleRayTracer/third_party/SDL2/build/CMakeFiles/CMakeScratch/TryCompile-mx70g3"
+      binary: "C:/Users/bluej/Documents/GitHub/SimpleRayTracer/third_party/SDL2/build/CMakeFiles/CMakeScratch/TryCompile-mx70g3"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/Users/bluej/Documents/GitHub/SimpleRayTracer/third_party/SDL2/cmake"
+    buildResult:
+      variable: "HAVE_DDRAW_H"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/bluej/Documents/GitHub/SimpleRayTracer/third_party/SDL2/build/CMakeFiles/CMakeScratch/TryCompile-mx70g3'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_a7f63.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild version 17.11.2+c078802d4 for .NET Framework
+        Build started 9/18/2024 8:36:19 AM.
+        
+        Project "C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-mx70g3\\cmTC_a7f63.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Creating directory "cmTC_a7f63.dir\\Debug\\".
+          Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+          Creating directory "C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-mx70g3\\Debug\\".
+          Creating directory "cmTC_a7f63.dir\\Debug\\cmTC_a7f63.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_a7f63.dir\\Debug\\cmTC_a7f63.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_a7f63.dir\\Debug\\cmTC_a7f63.tlog\\unsuccessfulbuild".
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _GNU_SOURCE=1 /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_a7f63.dir\\Debug\\\\" /Fd"cmTC_a7f63.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-mx70g3\\CheckIncludeFile.c"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.41.34120 for x64
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _GNU_SOURCE=1 /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_a7f63.dir\\Debug\\\\" /Fd"cmTC_a7f63.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-mx70g3\\CheckIncludeFile.c"
+          CheckIncludeFile.c
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-mx70g3\\Debug\\cmTC_a7f63.exe" /INCREMENTAL /ILK:"cmTC_a7f63.dir\\Debug\\cmTC_a7f63.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/bluej/Documents/GitHub/SimpleRayTracer/third_party/SDL2/build/CMakeFiles/CMakeScratch/TryCompile-mx70g3/Debug/cmTC_a7f63.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/bluej/Documents/GitHub/SimpleRayTracer/third_party/SDL2/build/CMakeFiles/CMakeScratch/TryCompile-mx70g3/Debug/cmTC_a7f63.lib" /MACHINE:X64  /machine:x64 cmTC_a7f63.dir\\Debug\\CheckIncludeFile.obj
+          cmTC_a7f63.vcxproj -> C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-mx70g3\\Debug\\cmTC_a7f63.exe
+        FinalizeBuildStatus:
+          Deleting file "cmTC_a7f63.dir\\Debug\\cmTC_a7f63.tlog\\unsuccessfulbuild".
+          Touching "cmTC_a7f63.dir\\Debug\\cmTC_a7f63.tlog\\cmTC_a7f63.lastbuildstate".
+        Done Building Project "C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-mx70g3\\cmTC_a7f63.vcxproj" (default targets).
+        
+        Build succeeded.
+            0 Warning(s)
+            0 Error(s)
+        
+        Time Elapsed 00:00:01.06
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CheckIncludeFile.cmake:90 (try_compile)"
+      - "CMakeLists.txt:1811 (check_include_file)"
+    checks:
+      - "Looking for dsound.h"
+    directories:
+      source: "C:/Users/bluej/Documents/GitHub/SimpleRayTracer/third_party/SDL2/build/CMakeFiles/CMakeScratch/TryCompile-1yc1a0"
+      binary: "C:/Users/bluej/Documents/GitHub/SimpleRayTracer/third_party/SDL2/build/CMakeFiles/CMakeScratch/TryCompile-1yc1a0"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/Users/bluej/Documents/GitHub/SimpleRayTracer/third_party/SDL2/cmake"
+    buildResult:
+      variable: "HAVE_DSOUND_H"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/bluej/Documents/GitHub/SimpleRayTracer/third_party/SDL2/build/CMakeFiles/CMakeScratch/TryCompile-1yc1a0'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_e726e.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild version 17.11.2+c078802d4 for .NET Framework
+        Build started 9/18/2024 8:36:20 AM.
+        
+        Project "C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-1yc1a0\\cmTC_e726e.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Creating directory "cmTC_e726e.dir\\Debug\\".
+          Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+          Creating directory "C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-1yc1a0\\Debug\\".
+          Creating directory "cmTC_e726e.dir\\Debug\\cmTC_e726e.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_e726e.dir\\Debug\\cmTC_e726e.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_e726e.dir\\Debug\\cmTC_e726e.tlog\\unsuccessfulbuild".
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _GNU_SOURCE=1 /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_e726e.dir\\Debug\\\\" /Fd"cmTC_e726e.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-1yc1a0\\CheckIncludeFile.c"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.41.34120 for x64
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _GNU_SOURCE=1 /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_e726e.dir\\Debug\\\\" /Fd"cmTC_e726e.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-1yc1a0\\CheckIncludeFile.c"
+          CheckIncludeFile.c
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-1yc1a0\\Debug\\cmTC_e726e.exe" /INCREMENTAL /ILK:"cmTC_e726e.dir\\Debug\\cmTC_e726e.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/bluej/Documents/GitHub/SimpleRayTracer/third_party/SDL2/build/CMakeFiles/CMakeScratch/TryCompile-1yc1a0/Debug/cmTC_e726e.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/bluej/Documents/GitHub/SimpleRayTracer/third_party/SDL2/build/CMakeFiles/CMakeScratch/TryCompile-1yc1a0/Debug/cmTC_e726e.lib" /MACHINE:X64  /machine:x64 cmTC_e726e.dir\\Debug\\CheckIncludeFile.obj
+          cmTC_e726e.vcxproj -> C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-1yc1a0\\Debug\\cmTC_e726e.exe
+        FinalizeBuildStatus:
+          Deleting file "cmTC_e726e.dir\\Debug\\cmTC_e726e.tlog\\unsuccessfulbuild".
+          Touching "cmTC_e726e.dir\\Debug\\cmTC_e726e.tlog\\cmTC_e726e.lastbuildstate".
+        Done Building Project "C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-1yc1a0\\cmTC_e726e.vcxproj" (default targets).
+        
+        Build succeeded.
+            0 Warning(s)
+            0 Error(s)
+        
+        Time Elapsed 00:00:01.10
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CheckIncludeFile.cmake:90 (try_compile)"
+      - "CMakeLists.txt:1812 (check_include_file)"
+    checks:
+      - "Looking for dinput.h"
+    directories:
+      source: "C:/Users/bluej/Documents/GitHub/SimpleRayTracer/third_party/SDL2/build/CMakeFiles/CMakeScratch/TryCompile-xi9y5k"
+      binary: "C:/Users/bluej/Documents/GitHub/SimpleRayTracer/third_party/SDL2/build/CMakeFiles/CMakeScratch/TryCompile-xi9y5k"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/Users/bluej/Documents/GitHub/SimpleRayTracer/third_party/SDL2/cmake"
+    buildResult:
+      variable: "HAVE_DINPUT_H"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/bluej/Documents/GitHub/SimpleRayTracer/third_party/SDL2/build/CMakeFiles/CMakeScratch/TryCompile-xi9y5k'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_8951c.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild version 17.11.2+c078802d4 for .NET Framework
+        Build started 9/18/2024 8:36:22 AM.
+        
+        Project "C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-xi9y5k\\cmTC_8951c.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Creating directory "cmTC_8951c.dir\\Debug\\".
+          Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+          Creating directory "C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-xi9y5k\\Debug\\".
+          Creating directory "cmTC_8951c.dir\\Debug\\cmTC_8951c.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_8951c.dir\\Debug\\cmTC_8951c.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_8951c.dir\\Debug\\cmTC_8951c.tlog\\unsuccessfulbuild".
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _GNU_SOURCE=1 /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_8951c.dir\\Debug\\\\" /Fd"cmTC_8951c.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-xi9y5k\\CheckIncludeFile.c"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.41.34120 for x64
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _GNU_SOURCE=1 /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_8951c.dir\\Debug\\\\" /Fd"cmTC_8951c.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-xi9y5k\\CheckIncludeFile.c"
+          CheckIncludeFile.c
+          C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.22621.0\\um\\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-xi9y5k\\Debug\\cmTC_8951c.exe" /INCREMENTAL /ILK:"cmTC_8951c.dir\\Debug\\cmTC_8951c.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/bluej/Documents/GitHub/SimpleRayTracer/third_party/SDL2/build/CMakeFiles/CMakeScratch/TryCompile-xi9y5k/Debug/cmTC_8951c.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/bluej/Documents/GitHub/SimpleRayTracer/third_party/SDL2/build/CMakeFiles/CMakeScratch/TryCompile-xi9y5k/Debug/cmTC_8951c.lib" /MACHINE:X64  /machine:x64 cmTC_8951c.dir\\Debug\\CheckIncludeFile.obj
+          cmTC_8951c.vcxproj -> C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-xi9y5k\\Debug\\cmTC_8951c.exe
+        FinalizeBuildStatus:
+          Deleting file "cmTC_8951c.dir\\Debug\\cmTC_8951c.tlog\\unsuccessfulbuild".
+          Touching "cmTC_8951c.dir\\Debug\\cmTC_8951c.tlog\\cmTC_8951c.lastbuildstate".
+        Done Building Project "C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-xi9y5k\\cmTC_8951c.vcxproj" (default targets).
+        
+        Build succeeded.
+            0 Warning(s)
+            0 Error(s)
+        
+        Time Elapsed 00:00:01.17
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CheckIncludeFile.cmake:90 (try_compile)"
+      - "CMakeLists.txt:1816 (check_include_file)"
+    checks:
+      - "Looking for dxgi.h"
+    directories:
+      source: "C:/Users/bluej/Documents/GitHub/SimpleRayTracer/third_party/SDL2/build/CMakeFiles/CMakeScratch/TryCompile-koypey"
+      binary: "C:/Users/bluej/Documents/GitHub/SimpleRayTracer/third_party/SDL2/build/CMakeFiles/CMakeScratch/TryCompile-koypey"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/Users/bluej/Documents/GitHub/SimpleRayTracer/third_party/SDL2/cmake"
+    buildResult:
+      variable: "HAVE_DXGI_H"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/bluej/Documents/GitHub/SimpleRayTracer/third_party/SDL2/build/CMakeFiles/CMakeScratch/TryCompile-koypey'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_778ab.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild version 17.11.2+c078802d4 for .NET Framework
+        Build started 9/18/2024 8:36:23 AM.
+        
+        Project "C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-koypey\\cmTC_778ab.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Creating directory "cmTC_778ab.dir\\Debug\\".
+          Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+          Creating directory "C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-koypey\\Debug\\".
+          Creating directory "cmTC_778ab.dir\\Debug\\cmTC_778ab.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_778ab.dir\\Debug\\cmTC_778ab.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_778ab.dir\\Debug\\cmTC_778ab.tlog\\unsuccessfulbuild".
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _GNU_SOURCE=1 /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_778ab.dir\\Debug\\\\" /Fd"cmTC_778ab.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-koypey\\CheckIncludeFile.c"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.41.34120 for x64
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _GNU_SOURCE=1 /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_778ab.dir\\Debug\\\\" /Fd"cmTC_778ab.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-koypey\\CheckIncludeFile.c"
+          CheckIncludeFile.c
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-koypey\\Debug\\cmTC_778ab.exe" /INCREMENTAL /ILK:"cmTC_778ab.dir\\Debug\\cmTC_778ab.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/bluej/Documents/GitHub/SimpleRayTracer/third_party/SDL2/build/CMakeFiles/CMakeScratch/TryCompile-koypey/Debug/cmTC_778ab.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/bluej/Documents/GitHub/SimpleRayTracer/third_party/SDL2/build/CMakeFiles/CMakeScratch/TryCompile-koypey/Debug/cmTC_778ab.lib" /MACHINE:X64  /machine:x64 cmTC_778ab.dir\\Debug\\CheckIncludeFile.obj
+          cmTC_778ab.vcxproj -> C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-koypey\\Debug\\cmTC_778ab.exe
+        FinalizeBuildStatus:
+          Deleting file "cmTC_778ab.dir\\Debug\\cmTC_778ab.tlog\\unsuccessfulbuild".
+          Touching "cmTC_778ab.dir\\Debug\\cmTC_778ab.tlog\\cmTC_778ab.lastbuildstate".
+        Done Building Project "C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-koypey\\cmTC_778ab.vcxproj" (default targets).
+        
+        Build succeeded.
+            0 Warning(s)
+            0 Error(s)
+        
+        Time Elapsed 00:00:01.12
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CheckCSourceCompiles.cmake:52 (cmake_check_source_compiles)"
+      - "CMakeLists.txt:1830 (check_c_source_compiles)"
+    checks:
+      - "Performing Test HAVE_XINPUT_H"
+    directories:
+      source: "C:/Users/bluej/Documents/GitHub/SimpleRayTracer/third_party/SDL2/build/CMakeFiles/CMakeScratch/TryCompile-wo9ufy"
+      binary: "C:/Users/bluej/Documents/GitHub/SimpleRayTracer/third_party/SDL2/build/CMakeFiles/CMakeScratch/TryCompile-wo9ufy"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/Users/bluej/Documents/GitHub/SimpleRayTracer/third_party/SDL2/cmake"
+    buildResult:
+      variable: "HAVE_XINPUT_H"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/bluej/Documents/GitHub/SimpleRayTracer/third_party/SDL2/build/CMakeFiles/CMakeScratch/TryCompile-wo9ufy'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_2c537.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild version 17.11.2+c078802d4 for .NET Framework
+        Build started 9/18/2024 8:36:25 AM.
+        
+        Project "C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-wo9ufy\\cmTC_2c537.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Creating directory "cmTC_2c537.dir\\Debug\\".
+          Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+          Creating directory "C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-wo9ufy\\Debug\\".
+          Creating directory "cmTC_2c537.dir\\Debug\\cmTC_2c537.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_2c537.dir\\Debug\\cmTC_2c537.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_2c537.dir\\Debug\\cmTC_2c537.tlog\\unsuccessfulbuild".
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _GNU_SOURCE=1 /D HAVE_XINPUT_H /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_2c537.dir\\Debug\\\\" /Fd"cmTC_2c537.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-wo9ufy\\src.c"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.41.34120 for x64
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _GNU_SOURCE=1 /D HAVE_XINPUT_H /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_2c537.dir\\Debug\\\\" /Fd"cmTC_2c537.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-wo9ufy\\src.c"
+          src.c
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-wo9ufy\\Debug\\cmTC_2c537.exe" /INCREMENTAL /ILK:"cmTC_2c537.dir\\Debug\\cmTC_2c537.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/bluej/Documents/GitHub/SimpleRayTracer/third_party/SDL2/build/CMakeFiles/CMakeScratch/TryCompile-wo9ufy/Debug/cmTC_2c537.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/bluej/Documents/GitHub/SimpleRayTracer/third_party/SDL2/build/CMakeFiles/CMakeScratch/TryCompile-wo9ufy/Debug/cmTC_2c537.lib" /MACHINE:X64  /machine:x64 cmTC_2c537.dir\\Debug\\src.obj
+          cmTC_2c537.vcxproj -> C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-wo9ufy\\Debug\\cmTC_2c537.exe
+        FinalizeBuildStatus:
+          Deleting file "cmTC_2c537.dir\\Debug\\cmTC_2c537.tlog\\unsuccessfulbuild".
+          Touching "cmTC_2c537.dir\\Debug\\cmTC_2c537.tlog\\cmTC_2c537.lastbuildstate".
+        Done Building Project "C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-wo9ufy\\cmTC_2c537.vcxproj" (default targets).
+        
+        Build succeeded.
+            0 Warning(s)
+            0 Error(s)
+        
+        Time Elapsed 00:00:01.14
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CheckCSourceCompiles.cmake:52 (cmake_check_source_compiles)"
+      - "CMakeLists.txt:1834 (check_c_source_compiles)"
+    checks:
+      - "Performing Test HAVE_WINDOWS_GAMING_INPUT_H"
+    directories:
+      source: "C:/Users/bluej/Documents/GitHub/SimpleRayTracer/third_party/SDL2/build/CMakeFiles/CMakeScratch/TryCompile-g4yzlj"
+      binary: "C:/Users/bluej/Documents/GitHub/SimpleRayTracer/third_party/SDL2/build/CMakeFiles/CMakeScratch/TryCompile-g4yzlj"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/Users/bluej/Documents/GitHub/SimpleRayTracer/third_party/SDL2/cmake"
+    buildResult:
+      variable: "HAVE_WINDOWS_GAMING_INPUT_H"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/bluej/Documents/GitHub/SimpleRayTracer/third_party/SDL2/build/CMakeFiles/CMakeScratch/TryCompile-g4yzlj'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_80755.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild version 17.11.2+c078802d4 for .NET Framework
+        Build started 9/18/2024 8:36:27 AM.
+        
+        Project "C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-g4yzlj\\cmTC_80755.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Creating directory "cmTC_80755.dir\\Debug\\".
+          Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+          Creating directory "C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-g4yzlj\\Debug\\".
+          Creating directory "cmTC_80755.dir\\Debug\\cmTC_80755.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_80755.dir\\Debug\\cmTC_80755.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_80755.dir\\Debug\\cmTC_80755.tlog\\unsuccessfulbuild".
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _GNU_SOURCE=1 /D HAVE_WINDOWS_GAMING_INPUT_H /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_80755.dir\\Debug\\\\" /Fd"cmTC_80755.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-g4yzlj\\src.c"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.41.34120 for x64
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _GNU_SOURCE=1 /D HAVE_WINDOWS_GAMING_INPUT_H /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_80755.dir\\Debug\\\\" /Fd"cmTC_80755.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-g4yzlj\\src.c"
+          src.c
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-g4yzlj\\Debug\\cmTC_80755.exe" /INCREMENTAL /ILK:"cmTC_80755.dir\\Debug\\cmTC_80755.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/bluej/Documents/GitHub/SimpleRayTracer/third_party/SDL2/build/CMakeFiles/CMakeScratch/TryCompile-g4yzlj/Debug/cmTC_80755.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/bluej/Documents/GitHub/SimpleRayTracer/third_party/SDL2/build/CMakeFiles/CMakeScratch/TryCompile-g4yzlj/Debug/cmTC_80755.lib" /MACHINE:X64  /machine:x64 cmTC_80755.dir\\Debug\\src.obj
+          cmTC_80755.vcxproj -> C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-g4yzlj\\Debug\\cmTC_80755.exe
+        FinalizeBuildStatus:
+          Deleting file "cmTC_80755.dir\\Debug\\cmTC_80755.tlog\\unsuccessfulbuild".
+          Touching "cmTC_80755.dir\\Debug\\cmTC_80755.tlog\\cmTC_80755.lastbuildstate".
+        Done Building Project "C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-g4yzlj\\cmTC_80755.vcxproj" (default targets).
+        
+        Build succeeded.
+            0 Warning(s)
+            0 Error(s)
+        
+        Time Elapsed 00:00:01.80
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CheckIncludeFile.cmake:90 (try_compile)"
+      - "CMakeLists.txt:1842 (check_include_file)"
+    checks:
+      - "Looking for tpcshrd.h"
+    directories:
+      source: "C:/Users/bluej/Documents/GitHub/SimpleRayTracer/third_party/SDL2/build/CMakeFiles/CMakeScratch/TryCompile-brq03e"
+      binary: "C:/Users/bluej/Documents/GitHub/SimpleRayTracer/third_party/SDL2/build/CMakeFiles/CMakeScratch/TryCompile-brq03e"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/Users/bluej/Documents/GitHub/SimpleRayTracer/third_party/SDL2/cmake"
+    buildResult:
+      variable: "HAVE_TPCSHRD_H"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/bluej/Documents/GitHub/SimpleRayTracer/third_party/SDL2/build/CMakeFiles/CMakeScratch/TryCompile-brq03e'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_72da4.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild version 17.11.2+c078802d4 for .NET Framework
+        Build started 9/18/2024 8:36:29 AM.
+        
+        Project "C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-brq03e\\cmTC_72da4.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Creating directory "cmTC_72da4.dir\\Debug\\".
+          Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+          Creating directory "C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-brq03e\\Debug\\".
+          Creating directory "cmTC_72da4.dir\\Debug\\cmTC_72da4.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_72da4.dir\\Debug\\cmTC_72da4.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_72da4.dir\\Debug\\cmTC_72da4.tlog\\unsuccessfulbuild".
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _GNU_SOURCE=1 /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_72da4.dir\\Debug\\\\" /Fd"cmTC_72da4.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-brq03e\\CheckIncludeFile.c"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.41.34120 for x64
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _GNU_SOURCE=1 /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_72da4.dir\\Debug\\\\" /Fd"cmTC_72da4.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-brq03e\\CheckIncludeFile.c"
+          CheckIncludeFile.c
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-brq03e\\Debug\\cmTC_72da4.exe" /INCREMENTAL /ILK:"cmTC_72da4.dir\\Debug\\cmTC_72da4.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/bluej/Documents/GitHub/SimpleRayTracer/third_party/SDL2/build/CMakeFiles/CMakeScratch/TryCompile-brq03e/Debug/cmTC_72da4.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/bluej/Documents/GitHub/SimpleRayTracer/third_party/SDL2/build/CMakeFiles/CMakeScratch/TryCompile-brq03e/Debug/cmTC_72da4.lib" /MACHINE:X64  /machine:x64 cmTC_72da4.dir\\Debug\\CheckIncludeFile.obj
+          cmTC_72da4.vcxproj -> C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-brq03e\\Debug\\cmTC_72da4.exe
+        FinalizeBuildStatus:
+          Deleting file "cmTC_72da4.dir\\Debug\\cmTC_72da4.tlog\\unsuccessfulbuild".
+          Touching "cmTC_72da4.dir\\Debug\\cmTC_72da4.tlog\\cmTC_72da4.lastbuildstate".
+        Done Building Project "C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-brq03e\\cmTC_72da4.vcxproj" (default targets).
+        
+        Build succeeded.
+            0 Warning(s)
+            0 Error(s)
+        
+        Time Elapsed 00:00:01.03
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CheckIncludeFile.cmake:90 (try_compile)"
+      - "CMakeLists.txt:1843 (check_include_file)"
+    checks:
+      - "Looking for roapi.h"
+    directories:
+      source: "C:/Users/bluej/Documents/GitHub/SimpleRayTracer/third_party/SDL2/build/CMakeFiles/CMakeScratch/TryCompile-dij8lc"
+      binary: "C:/Users/bluej/Documents/GitHub/SimpleRayTracer/third_party/SDL2/build/CMakeFiles/CMakeScratch/TryCompile-dij8lc"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/Users/bluej/Documents/GitHub/SimpleRayTracer/third_party/SDL2/cmake"
+    buildResult:
+      variable: "HAVE_ROAPI_H"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/bluej/Documents/GitHub/SimpleRayTracer/third_party/SDL2/build/CMakeFiles/CMakeScratch/TryCompile-dij8lc'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_573fb.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild version 17.11.2+c078802d4 for .NET Framework
+        Build started 9/18/2024 8:36:30 AM.
+        
+        Project "C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-dij8lc\\cmTC_573fb.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Creating directory "cmTC_573fb.dir\\Debug\\".
+          Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+          Creating directory "C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-dij8lc\\Debug\\".
+          Creating directory "cmTC_573fb.dir\\Debug\\cmTC_573fb.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_573fb.dir\\Debug\\cmTC_573fb.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_573fb.dir\\Debug\\cmTC_573fb.tlog\\unsuccessfulbuild".
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _GNU_SOURCE=1 /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_573fb.dir\\Debug\\\\" /Fd"cmTC_573fb.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-dij8lc\\CheckIncludeFile.c"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.41.34120 for x64
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _GNU_SOURCE=1 /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_573fb.dir\\Debug\\\\" /Fd"cmTC_573fb.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-dij8lc\\CheckIncludeFile.c"
+          CheckIncludeFile.c
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-dij8lc\\Debug\\cmTC_573fb.exe" /INCREMENTAL /ILK:"cmTC_573fb.dir\\Debug\\cmTC_573fb.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/bluej/Documents/GitHub/SimpleRayTracer/third_party/SDL2/build/CMakeFiles/CMakeScratch/TryCompile-dij8lc/Debug/cmTC_573fb.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/bluej/Documents/GitHub/SimpleRayTracer/third_party/SDL2/build/CMakeFiles/CMakeScratch/TryCompile-dij8lc/Debug/cmTC_573fb.lib" /MACHINE:X64  /machine:x64 cmTC_573fb.dir\\Debug\\CheckIncludeFile.obj
+          cmTC_573fb.vcxproj -> C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-dij8lc\\Debug\\cmTC_573fb.exe
+        FinalizeBuildStatus:
+          Deleting file "cmTC_573fb.dir\\Debug\\cmTC_573fb.tlog\\unsuccessfulbuild".
+          Touching "cmTC_573fb.dir\\Debug\\cmTC_573fb.tlog\\cmTC_573fb.lastbuildstate".
+        Done Building Project "C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-dij8lc\\cmTC_573fb.vcxproj" (default targets).
+        
+        Build succeeded.
+            0 Warning(s)
+            0 Error(s)
+        
+        Time Elapsed 00:00:01.11
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CheckIncludeFile.cmake:90 (try_compile)"
+      - "CMakeLists.txt:1844 (check_include_file)"
+    checks:
+      - "Looking for mmdeviceapi.h"
+    directories:
+      source: "C:/Users/bluej/Documents/GitHub/SimpleRayTracer/third_party/SDL2/build/CMakeFiles/CMakeScratch/TryCompile-sxn40l"
+      binary: "C:/Users/bluej/Documents/GitHub/SimpleRayTracer/third_party/SDL2/build/CMakeFiles/CMakeScratch/TryCompile-sxn40l"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/Users/bluej/Documents/GitHub/SimpleRayTracer/third_party/SDL2/cmake"
+    buildResult:
+      variable: "HAVE_MMDEVICEAPI_H"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/bluej/Documents/GitHub/SimpleRayTracer/third_party/SDL2/build/CMakeFiles/CMakeScratch/TryCompile-sxn40l'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_6b881.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild version 17.11.2+c078802d4 for .NET Framework
+        Build started 9/18/2024 8:36:32 AM.
+        
+        Project "C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-sxn40l\\cmTC_6b881.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Creating directory "cmTC_6b881.dir\\Debug\\".
+          Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+          Creating directory "C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-sxn40l\\Debug\\".
+          Creating directory "cmTC_6b881.dir\\Debug\\cmTC_6b881.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_6b881.dir\\Debug\\cmTC_6b881.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_6b881.dir\\Debug\\cmTC_6b881.tlog\\unsuccessfulbuild".
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _GNU_SOURCE=1 /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_6b881.dir\\Debug\\\\" /Fd"cmTC_6b881.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-sxn40l\\CheckIncludeFile.c"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.41.34120 for x64
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _GNU_SOURCE=1 /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_6b881.dir\\Debug\\\\" /Fd"cmTC_6b881.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-sxn40l\\CheckIncludeFile.c"
+          CheckIncludeFile.c
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-sxn40l\\Debug\\cmTC_6b881.exe" /INCREMENTAL /ILK:"cmTC_6b881.dir\\Debug\\cmTC_6b881.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/bluej/Documents/GitHub/SimpleRayTracer/third_party/SDL2/build/CMakeFiles/CMakeScratch/TryCompile-sxn40l/Debug/cmTC_6b881.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/bluej/Documents/GitHub/SimpleRayTracer/third_party/SDL2/build/CMakeFiles/CMakeScratch/TryCompile-sxn40l/Debug/cmTC_6b881.lib" /MACHINE:X64  /machine:x64 cmTC_6b881.dir\\Debug\\CheckIncludeFile.obj
+          cmTC_6b881.vcxproj -> C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-sxn40l\\Debug\\cmTC_6b881.exe
+        FinalizeBuildStatus:
+          Deleting file "cmTC_6b881.dir\\Debug\\cmTC_6b881.tlog\\unsuccessfulbuild".
+          Touching "cmTC_6b881.dir\\Debug\\cmTC_6b881.tlog\\cmTC_6b881.lastbuildstate".
+        Done Building Project "C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-sxn40l\\cmTC_6b881.vcxproj" (default targets).
+        
+        Build succeeded.
+            0 Warning(s)
+            0 Error(s)
+        
+        Time Elapsed 00:00:01.12
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CheckIncludeFile.cmake:90 (try_compile)"
+      - "CMakeLists.txt:1845 (check_include_file)"
+    checks:
+      - "Looking for audioclient.h"
+    directories:
+      source: "C:/Users/bluej/Documents/GitHub/SimpleRayTracer/third_party/SDL2/build/CMakeFiles/CMakeScratch/TryCompile-vnl6tk"
+      binary: "C:/Users/bluej/Documents/GitHub/SimpleRayTracer/third_party/SDL2/build/CMakeFiles/CMakeScratch/TryCompile-vnl6tk"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/Users/bluej/Documents/GitHub/SimpleRayTracer/third_party/SDL2/cmake"
+    buildResult:
+      variable: "HAVE_AUDIOCLIENT_H"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/bluej/Documents/GitHub/SimpleRayTracer/third_party/SDL2/build/CMakeFiles/CMakeScratch/TryCompile-vnl6tk'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_ee802.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild version 17.11.2+c078802d4 for .NET Framework
+        Build started 9/18/2024 8:36:34 AM.
+        
+        Project "C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-vnl6tk\\cmTC_ee802.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Creating directory "cmTC_ee802.dir\\Debug\\".
+          Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+          Creating directory "C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-vnl6tk\\Debug\\".
+          Creating directory "cmTC_ee802.dir\\Debug\\cmTC_ee802.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_ee802.dir\\Debug\\cmTC_ee802.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_ee802.dir\\Debug\\cmTC_ee802.tlog\\unsuccessfulbuild".
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _GNU_SOURCE=1 /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_ee802.dir\\Debug\\\\" /Fd"cmTC_ee802.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-vnl6tk\\CheckIncludeFile.c"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.41.34120 for x64
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _GNU_SOURCE=1 /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_ee802.dir\\Debug\\\\" /Fd"cmTC_ee802.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-vnl6tk\\CheckIncludeFile.c"
+          CheckIncludeFile.c
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-vnl6tk\\Debug\\cmTC_ee802.exe" /INCREMENTAL /ILK:"cmTC_ee802.dir\\Debug\\cmTC_ee802.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/bluej/Documents/GitHub/SimpleRayTracer/third_party/SDL2/build/CMakeFiles/CMakeScratch/TryCompile-vnl6tk/Debug/cmTC_ee802.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/bluej/Documents/GitHub/SimpleRayTracer/third_party/SDL2/build/CMakeFiles/CMakeScratch/TryCompile-vnl6tk/Debug/cmTC_ee802.lib" /MACHINE:X64  /machine:x64 cmTC_ee802.dir\\Debug\\CheckIncludeFile.obj
+          cmTC_ee802.vcxproj -> C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-vnl6tk\\Debug\\cmTC_ee802.exe
+        FinalizeBuildStatus:
+          Deleting file "cmTC_ee802.dir\\Debug\\cmTC_ee802.tlog\\unsuccessfulbuild".
+          Touching "cmTC_ee802.dir\\Debug\\cmTC_ee802.tlog\\cmTC_ee802.lastbuildstate".
+        Done Building Project "C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-vnl6tk\\cmTC_ee802.vcxproj" (default targets).
+        
+        Build succeeded.
+            0 Warning(s)
+            0 Error(s)
+        
+        Time Elapsed 00:00:01.10
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CheckIncludeFile.cmake:90 (try_compile)"
+      - "CMakeLists.txt:1846 (check_include_file)"
+    checks:
+      - "Looking for sensorsapi.h"
+    directories:
+      source: "C:/Users/bluej/Documents/GitHub/SimpleRayTracer/third_party/SDL2/build/CMakeFiles/CMakeScratch/TryCompile-xmgb8c"
+      binary: "C:/Users/bluej/Documents/GitHub/SimpleRayTracer/third_party/SDL2/build/CMakeFiles/CMakeScratch/TryCompile-xmgb8c"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/Users/bluej/Documents/GitHub/SimpleRayTracer/third_party/SDL2/cmake"
+    buildResult:
+      variable: "HAVE_SENSORSAPI_H"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/bluej/Documents/GitHub/SimpleRayTracer/third_party/SDL2/build/CMakeFiles/CMakeScratch/TryCompile-xmgb8c'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_6ab75.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild version 17.11.2+c078802d4 for .NET Framework
+        Build started 9/18/2024 8:36:35 AM.
+        
+        Project "C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-xmgb8c\\cmTC_6ab75.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Creating directory "cmTC_6ab75.dir\\Debug\\".
+          Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+          Creating directory "C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-xmgb8c\\Debug\\".
+          Creating directory "cmTC_6ab75.dir\\Debug\\cmTC_6ab75.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_6ab75.dir\\Debug\\cmTC_6ab75.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_6ab75.dir\\Debug\\cmTC_6ab75.tlog\\unsuccessfulbuild".
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _GNU_SOURCE=1 /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_6ab75.dir\\Debug\\\\" /Fd"cmTC_6ab75.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-xmgb8c\\CheckIncludeFile.c"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.41.34120 for x64
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _GNU_SOURCE=1 /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_6ab75.dir\\Debug\\\\" /Fd"cmTC_6ab75.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-xmgb8c\\CheckIncludeFile.c"
+          CheckIncludeFile.c
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-xmgb8c\\Debug\\cmTC_6ab75.exe" /INCREMENTAL /ILK:"cmTC_6ab75.dir\\Debug\\cmTC_6ab75.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/bluej/Documents/GitHub/SimpleRayTracer/third_party/SDL2/build/CMakeFiles/CMakeScratch/TryCompile-xmgb8c/Debug/cmTC_6ab75.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/bluej/Documents/GitHub/SimpleRayTracer/third_party/SDL2/build/CMakeFiles/CMakeScratch/TryCompile-xmgb8c/Debug/cmTC_6ab75.lib" /MACHINE:X64  /machine:x64 cmTC_6ab75.dir\\Debug\\CheckIncludeFile.obj
+          cmTC_6ab75.vcxproj -> C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-xmgb8c\\Debug\\cmTC_6ab75.exe
+        FinalizeBuildStatus:
+          Deleting file "cmTC_6ab75.dir\\Debug\\cmTC_6ab75.tlog\\unsuccessfulbuild".
+          Touching "cmTC_6ab75.dir\\Debug\\cmTC_6ab75.tlog\\cmTC_6ab75.lastbuildstate".
+        Done Building Project "C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-xmgb8c\\cmTC_6ab75.vcxproj" (default targets).
+        
+        Build succeeded.
+            0 Warning(s)
+            0 Error(s)
+        
+        Time Elapsed 00:00:01.08
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CheckIncludeFile.cmake:90 (try_compile)"
+      - "CMakeLists.txt:1847 (check_include_file)"
+    checks:
+      - "Looking for shellscalingapi.h"
+    directories:
+      source: "C:/Users/bluej/Documents/GitHub/SimpleRayTracer/third_party/SDL2/build/CMakeFiles/CMakeScratch/TryCompile-0tcmy3"
+      binary: "C:/Users/bluej/Documents/GitHub/SimpleRayTracer/third_party/SDL2/build/CMakeFiles/CMakeScratch/TryCompile-0tcmy3"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "C:/Users/bluej/Documents/GitHub/SimpleRayTracer/third_party/SDL2/cmake"
+    buildResult:
+      variable: "HAVE_SHELLSCALINGAPI_H"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/bluej/Documents/GitHub/SimpleRayTracer/third_party/SDL2/build/CMakeFiles/CMakeScratch/TryCompile-0tcmy3'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_3f301.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        MSBuild version 17.11.2+c078802d4 for .NET Framework
+        Build started 9/18/2024 8:36:37 AM.
+        
+        Project "C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-0tcmy3\\cmTC_3f301.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Creating directory "cmTC_3f301.dir\\Debug\\".
+          Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+          Creating directory "C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-0tcmy3\\Debug\\".
+          Creating directory "cmTC_3f301.dir\\Debug\\cmTC_3f301.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_3f301.dir\\Debug\\cmTC_3f301.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_3f301.dir\\Debug\\cmTC_3f301.tlog\\unsuccessfulbuild".
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _GNU_SOURCE=1 /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_3f301.dir\\Debug\\\\" /Fd"cmTC_3f301.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-0tcmy3\\CheckIncludeFile.c"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.41.34120 for x64
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _GNU_SOURCE=1 /D "CMAKE_INTDIR=\\"Debug\\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_3f301.dir\\Debug\\\\" /Fd"cmTC_3f301.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-0tcmy3\\CheckIncludeFile.c"
+          CheckIncludeFile.c
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-0tcmy3\\Debug\\cmTC_3f301.exe" /INCREMENTAL /ILK:"cmTC_3f301.dir\\Debug\\cmTC_3f301.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/bluej/Documents/GitHub/SimpleRayTracer/third_party/SDL2/build/CMakeFiles/CMakeScratch/TryCompile-0tcmy3/Debug/cmTC_3f301.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/bluej/Documents/GitHub/SimpleRayTracer/third_party/SDL2/build/CMakeFiles/CMakeScratch/TryCompile-0tcmy3/Debug/cmTC_3f301.lib" /MACHINE:X64  /machine:x64 cmTC_3f301.dir\\Debug\\CheckIncludeFile.obj
+          cmTC_3f301.vcxproj -> C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-0tcmy3\\Debug\\cmTC_3f301.exe
+        FinalizeBuildStatus:
+          Deleting file "cmTC_3f301.dir\\Debug\\cmTC_3f301.tlog\\unsuccessfulbuild".
+          Touching "cmTC_3f301.dir\\Debug\\cmTC_3f301.tlog\\cmTC_3f301.lastbuildstate".
+        Done Building Project "C:\\Users\\bluej\\Documents\\GitHub\\SimpleRayTracer\\third_party\\SDL2\\build\\CMakeFiles\\CMakeScratch\\TryCompile-0tcmy3\\cmTC_3f301.vcxproj" (default targets).
+        
+        Build succeeded.
+            0 Warning(s)
+            0 Error(s)
+        
+        Time Elapsed 00:00:01.15
+        
+      exitCode: 0
+...
