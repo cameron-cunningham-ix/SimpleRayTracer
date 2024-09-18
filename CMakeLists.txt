@@ -25,8 +25,20 @@ add_subdirectory(third_party/SDL2)
 # Include SDL2 headers
 include_directories(third_party/SDL2/include)
 
+link_directories(${PROJECT_SOURCE_DIR}/third_party/SDL2/build)
+
 # Create the executable
 add_executable(SimpleRayTracer ${SOURCES})
 
-# Link SDL2 to your project
-target_link_libraries(SimpleRayTracer SDL2 SDL2main)
+
+target_link_libraries(SimpleRayTracer SDL2d SDL2maind)
+
+# Copy SDL2d.dll to the output directory (Debug)
+add_custom_command(TARGET SimpleRayTracer POST_BUILD
+    COMMAND ${CMAKE_COMMAND} -E copy
+    ${PROJECT_SOURCE_DIR}/third_party/SDL2/build/Debug/SDL2d.dll
+    $<TARGET_FILE_DIR:SimpleRayTracer>)
+
+
+
+

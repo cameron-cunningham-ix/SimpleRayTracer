@@ -18,6 +18,9 @@
 
 int main(int argc, char* argv[]) {
 
+    std::cout << "Starting program...\n";
+    
+
     Hittable_List world;
 
     auto material_ground = make_shared<Lambertian>(Color(0.9, 0.8, 0.3));
@@ -35,19 +38,59 @@ int main(int argc, char* argv[]) {
     Camera cam;
 
     cam.aspect_ratio = 16.0 / 9.0;
-    cam.image_width = 200;
+    cam.image_width = 800;
     cam.samples_per_pixel = 200;
-    cam.max_depth = 10;
+    cam.max_depth = 30;
 
     cam.vfov = 45;
     cam.lookfrom = Point3(-2,2,1);
     cam.lookat - Point3(0,0,-1);
     cam.vup = Vec3(0,1,0);
 
-    cam.defocus_angle = 10.0;
+    cam.defocus_angle = 5.0;
     cam.focus_dist = 3.4;
 
-    cam.render(world);
+    std::cout << "Starting SDL...\n";
+
+    // Initialize SDL
+    if (SDL_Init(SDL_INIT_VIDEO) < 0) {
+        std::cerr << "SDL could not initialize! SDL_Error: " << SDL_GetError() << std::endl;
+        return -1;
+    } else{
+        std::cout << "SDL initialized successfully.\n";
+    }
+
+    SDL_Window* window = SDL_CreateWindow("Simple Ray Tracer",
+        SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED,
+        cam.image_width, int(cam.image_width/cam.aspect_ratio), SDL_WINDOW_SHOWN);
+
+    if (!window) {
+        std::cerr << "Window could not be created! SDL_Error: " << SDL_GetError() << std::endl;
+        return -1;
+    }
+
+    SDL_Surface* surface = SDL_GetWindowSurface(window);
+
+    std::cout << "Starting rendering...\n";
+
+    cam.render(world, surface);
+   
+    std::cout << "Rendering complete...\n";
+
+    // Wait for the window to close
+    SDL_Event e;
+    bool quit = false;
+    while (!quit) {
+        while (SDL_PollEvent(&e) != 0) {
+            if (e.type == SDL_QUIT) {
+                quit = true;
+            }
+        }
+    }
+
+    // Clean up
+    SDL_DestroyWindow(window);
+    SDL_Quit();
 
     return 0;
 }

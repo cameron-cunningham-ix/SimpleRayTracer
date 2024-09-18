@@ -7,6 +7,10 @@
 #include "hittable.hpp"
 #include "material.hpp"
 
+#include <future>   // For std::async
+#include <vector>   // For std::vector to store futures
+#include <sstream>  // For stringstream to handle row output
+
 class Camera {
 public:
     // Image
@@ -23,28 +27,61 @@ public:
     double defocus_angle = 0;    // Variation angle of rays through each pixel
     double focus_dist = 10;     // Distance from camera lookfrom point to plane of perfect focus
 
-    void render(const Hittable& world) {
-        initialize();
+    void render(const Hittable& world, SDL_Surface* surface) {
+        initialize();  // Initialize camera settings like position, orientation, etc.
 
-        std::cout << "P3\n" << image_width << " " << image_height << "\n255\n";
 
-        for (int j = 0; j < image_height; j++) {
-            std::clog << "\rScanlines remaining: " << (image_height - j) << " " << std::flush;
+        // Lambda function to render a single row (or scanline) of the image.
+        // This will be executed in parallel by different threads.
+        auto render_row = [&](int j) {
+            std::stringstream row_output;  // String stream to accumulate pixel data for this row
 
+            // Loop over each pixel in this row
             for (int i = 0; i < image_width; i++) {
-                Color pixel_color(0,0,0);
+                Color pixel_color(0, 0, 0);     // Initialize pixel color
 
-                for (int sample = 0; sample < samples_per_pixel; sample++) {
-                    Ray r = get_Ray(i,j);
-                    pixel_color += ray_Color(r, max_depth, world);
+                // Loop for anti-aliasing: shoot multiple rays per pixel to average the color
+                for (int sample = 0; sample < samples_per_pixel; sample++) {    
+                    Ray r = get_Ray(i, j);      // Get a ray for pixel(i, j)
+                    pixel_color += ray_Color(r, max_depth, world);      // Accumulate the color
                 }
-                write_Color(std::cout, pixel_samples_scale * pixel_color);
+
+                // Scale the pixel color based on the number of samples and write it to the SDL surface
+                Uint32* pixels = (Uint32*)surface->pixels;
+                pixels[(image_height - 1 - j) * image_width + i] = SDL_MapRGB(surface->format,
+                    static_cast<Uint8>(255.999 * pixel_samples_scale * pixel_color.x()),
+                    static_cast<Uint8>(255.999 * pixel_samples_scale * pixel_color.y()),
+                    static_cast<Uint8>(255.999 * pixel_samples_scale * pixel_color.z()));
+            }
+        };
+
+
+        // Vector to store the futures / parralel tasks
+        std::vector<std::future<void>> futures;
+
+        // Launch parallel tasks for each row
+        for (int j = 0; j < image_height; j++) {
+            // Use std::async to launch a parallel task that processes row 'j'
+            // std::launch::async ensures that this task is run asynchronously (in a separate thread).
+            // The lambda function 'render_row' is passed the row index 'j'.
+            futures.push_back(std::async(std::launch::async, render_row, j));
+
+            // Real-time update: Update the SDL window surface after every 10 rows (to avoid too frequent updates)
+            if (j % 10 == 0) {
+                SDL_UpdateWindowSurface(SDL_GetWindowFromID(1));  // Update the SDL window surface
             }
         }
 
-        std::clog << "\rDone.                       \n";
+        // Loop over the vector of futures to ensure that all parallel tasks have completed.
+        // This is important because it ensures that the entire image has been rendered before moving on.
+        for (auto& f : futures) {
+            f.get();    // Wait for each tasks (rendering of each row) to finish
+        }
 
+        // Final update to ensure all rows are drawn
+        SDL_UpdateWindowSurface(SDL_GetWindowFromID(1));
     }
+
 
     int get_Image_Height() {
         return image_height;
