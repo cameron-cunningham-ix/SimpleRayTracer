@@ -32,19 +32,19 @@ int main(int argc, char* argv[]) {
     world.add(make_shared<Sphere>(Point3( 0.0, -100.5, -1.0), 100.0, material_ground));
     //world.add(make_shared<Sphere>(Point3( 0.0,    0.0, -1.2),   2.5, material_center));
     //world.add(make_shared<Sphere>(Point3(-1.0,    0.0, -1.0),   0.5, material_left));
-    //world.add(make_shared<Sphere>(Point3(-1.0,    0.0, -1.0),   0.4, material_bubble));
+    world.add(make_shared<Sphere>(Point3(-1.0,    0.0, -1.0),   0.4, material_bubble));
     world.add(make_shared<Sphere>(Point3( 1.0,    0.0, -1.0),   0.5, material_right));
     
     Camera cam;
 
     cam.aspect_ratio = 16.0 / 9.0;
     cam.image_width = 800;
-    cam.samples_per_pixel = 1;
-    cam.max_depth = 2;      // NOTE: max_depth minimum is 2; if set to one, it only colors pixels that did not hit anything
+    cam.samples_per_pixel = 1;      // For "real-time" rendering, set samples_per_pixel to 1 and max_depth to 2
+    cam.max_depth = 2;              // NOTE: max_depth minimum is 2; if set to one, it only colors pixels that did not hit anything
 
     cam.vfov = 45;
-    cam.lookfrom = Point3(-3,2,1);
-    cam.lookat - Point3(0,0,0);
+    cam.lookfrom = Point3(0,0,0);
+    cam.lookat - Point3(0,0,1);
     cam.vup = Vec3(0,1,0);
 
     cam.defocus_angle = 1.0;
@@ -87,24 +87,41 @@ int main(int argc, char* argv[]) {
             }
             if (e.type == SDL_KEYDOWN){
                 switch(e.key.keysym.sym){
+
+                    // TODO: Alter the camera position based on lookat value as well
+
                     // Change camera position
                     case SDLK_a:
-                        cam.lookfrom = cam.lookfrom + Point3(0.1, 0, 0);
+                        cam.lookfrom += (cam.lookat - cam.lookfrom)*Point3(0, 0, 0.1);
                         break;
                     case SDLK_d:
-                        cam.lookfrom = cam.lookfrom + Point3(-0.1, 0, 0);
+                        cam.lookfrom = cam.lookfrom + Point3(0, 0, -0.1);
                         break;
                     case SDLK_w:
-                        cam.lookfrom = cam.lookfrom + Point3(0, 0, 0.1);
+                        cam.lookfrom = cam.lookfrom + Point3(0.1, 0, 0);
                         break;
                     case SDLK_s:
-                        cam.lookfrom = cam.lookfrom + Point3(0, 0, -0.1);
+                        cam.lookfrom = cam.lookfrom + Point3(-0.1, 0, 0);
                         break;
                     case SDLK_SPACE:
                         cam.lookfrom = cam.lookfrom + Point3(0, 0.1, 0);
                         break;
                     case SDLK_LSHIFT:
                         cam.lookfrom = cam.lookfrom + Point3(0, -0.1, 0);
+                        break;
+                    
+                    // Change camera lookat
+                    case SDLK_UP:
+                        cam.lookat = cam.lookat + Point3(0, 0.1, 0);
+                        break;
+                    case SDLK_DOWN:
+                        cam.lookat = cam.lookat + Point3(0, -0.1, 0);
+                        break;
+                    case SDLK_LEFT:
+                        cam.lookat = cam.lookat + Point3(-0.1, 0, 0);
+                        break;
+                    case SDLK_RIGHT:
+                        cam.lookat = cam.lookat + Point3(0.1, 0, 0);
                         break;
                 }
             }
