@@ -39,15 +39,15 @@ int main(int argc, char* argv[]) {
 
     cam.aspect_ratio = 16.0 / 9.0;
     cam.image_width = 800;
-    cam.samples_per_pixel = 50;
-    cam.max_depth = 10;
+    cam.samples_per_pixel = 1;
+    cam.max_depth = 2;      // NOTE: max_depth minimum is 2; if set to one, it only colors pixels that did not hit anything
 
     cam.vfov = 45;
-    cam.lookfrom = Point3(-2,2,1);
-    cam.lookat - Point3(0,0,-1);
+    cam.lookfrom = Point3(-3,2,1);
+    cam.lookat - Point3(0,0,0);
     cam.vup = Vec3(0,1,0);
 
-    cam.defocus_angle = 5.0;
+    cam.defocus_angle = 1.0;
     cam.focus_dist = 3.4;
 
     std::cout << "Starting SDL...\n";
@@ -85,7 +85,32 @@ int main(int argc, char* argv[]) {
             if (e.type == SDL_QUIT) {
                 quit = true;
             }
+            if (e.type == SDL_KEYDOWN){
+                switch(e.key.keysym.sym){
+                    // Change camera position
+                    case SDLK_a:
+                        cam.lookfrom = cam.lookfrom + Point3(0.1, 0, 0);
+                        break;
+                    case SDLK_d:
+                        cam.lookfrom = cam.lookfrom + Point3(-0.1, 0, 0);
+                        break;
+                    case SDLK_w:
+                        cam.lookfrom = cam.lookfrom + Point3(0, 0, 0.1);
+                        break;
+                    case SDLK_s:
+                        cam.lookfrom = cam.lookfrom + Point3(0, 0, -0.1);
+                        break;
+                    case SDLK_SPACE:
+                        cam.lookfrom = cam.lookfrom + Point3(0, 0.1, 0);
+                        break;
+                    case SDLK_LSHIFT:
+                        cam.lookfrom = cam.lookfrom + Point3(0, -0.1, 0);
+                        break;
+                }
+            }
         }
+
+        cam.render(world, surface);
     }
 
     // Clean up
