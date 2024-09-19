@@ -39,11 +39,12 @@ Build the project:
 
 Running the Ray Tracer
 
-After building the project, you can run the ray tracer from the build/Debug directory:
+After building the project, you can run the ray tracer from the build directory:
 
-    ./SimpleRayTracer.exe
+    .Debug/SimpleRayTracer.exe
 
 Once launched, the SDL window will open and start displaying the image as it’s progressively rendered.
+
 Project Structure
 
     src/ - Contains the source files for the ray tracer
