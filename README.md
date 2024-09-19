@@ -21,35 +21,25 @@ Building the Project
 
 Clone the repository:
 
-  bash
-
     git clone https://github.com/cameron-cunningham-ix/SimpleRayTracer.git
     cd SimpleRayTracer
 
 Create a build directory and navigate into it:
-
-bash
 
     mkdir build
     cd build
 
 Run CMake to generate the build files:
 
-bash
-
     cmake ..
 
 Build the project:
-
-bash
 
     cmake --build .
 
 Running the Ray Tracer
 
 After building the project, you can run the ray tracer from the build/Debug directory:
-
-bash
 
     ./SimpleRayTracer.exe
 
