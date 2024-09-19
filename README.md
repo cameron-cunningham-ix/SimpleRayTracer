@@ -1,6 +1,7 @@
 Ray Tracer - "Ray Tracing in One Weekend" with SDL
 
 This project is an implementation of the ray tracer described in Ray Tracing in One Weekend by Peter Shirley. The ray tracer renders an image by simulating the behavior of light rays in a 3D scene and is displayed in real-time through an SDL2 window as it is progressively generated.
+
 Features
 
     Ray tracing algorithm based on Ray Tracing in One Weekend
