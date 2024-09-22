@@ -5,8 +5,10 @@
 
 class Ray {
 public:
+    // Default constructor 
     Ray() {}
 
+    // Constructor 
     Ray(const Point3& origin, const Vec3& direction) : orig(origin), dir(direction) {}
 
     const Point3& origin() const {return orig;}

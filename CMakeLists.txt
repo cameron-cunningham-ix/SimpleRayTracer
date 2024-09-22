@@ -8,22 +8,19 @@ project(SimpleRayTracer VERSION 0.2)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 
-# Add source files (update this list with your actual files)
+# Add source files
 set(SOURCES
     src/main.cpp
 )
 
-# Include directories (update this list with your actual include paths)
-include_directories(include)
-
 # Prevent SDL2 from installing globally
 set(SDL2_DISABLE_INSTALL ON)
 
-# Add SDL2 as a subdirectory (point this to where SDL2 CMakeLists.txt is located)
-add_subdirectory(third_party/SDL2)
+# Add subdirectories
+add_subdirectory(third_party/SDL2 third_party/stb_image)
 
-# Include SDL2 headers
-include_directories(third_party/SDL2/include)
+# Include headers
+include_directories(include third_party/SDL2/include third_party/stb_image)
 
 link_directories(${PROJECT_SOURCE_DIR}/third_party/SDL2/build)
 

@@ -173,15 +173,15 @@ inline Vec3 random_On_Hemisphere(const Vec3& normal) {
 
 // Reflects vector `v` about a normal
 // Reflection formula: v' = v - 2 * dot(v, normal) * normal
-// Commonly used in reflection models for lighting.
+// Commonly used in reflection models for lighting
 inline Vec3 reflect(const Vec3& v, const Vec3& normal) {
     return v - 2*dot(v, normal)*normal;
 }
 
 // Refracts vector `uv` through a surface with normal `n` and ratio of refractive indices `etai_over_etat`
-// Snell's law is used to calculate the direction of refraction.
-// Perpendicular component: refracts as a proportion of `etai_over_etat`.
-// Parallel component: adjusted to ensure the magnitude of the resulting vector remains correct.
+// Snell's law is used to calculate the direction of refraction
+// Perpendicular component: refracts as a proportion of `etai_over_etat`
+// Parallel component: adjusted to ensure the magnitude of the resulting vector remains correct
 inline Vec3 refract(const Vec3& uv, const Vec3& n, double etai_over_etat) {
     double cos_theta = fmin(dot(-uv, n), 1.0);  // Compute cos(theta)
     Vec3 r_out_perp = etai_over_etat * (uv + cos_theta * n);  // Perpendicular component of the refracted ray

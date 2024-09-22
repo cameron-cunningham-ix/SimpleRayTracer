@@ -6,6 +6,7 @@
 #include "common.hpp"
 #include "hittable.hpp"
 #include "material.hpp"
+#include "environmentmap.hpp"
 
 #include <future>   // For std::async
 #include <vector>   // For std::vector to store futures
@@ -27,11 +28,11 @@ public:
     double defocus_angle = 0;    // Variation angle of rays through each pixel
     double focus_dist = 10;     // Distance from camera lookfrom point to plane of perfect focus
 
-    void render(const Hittable& world, SDL_Surface* surface) {
-        initialize();  // Initialize camera settings like position, orientation, etc.
+    void render(const Hittable& world, SDL_Surface* surface, const EnvironmentMap* envmap = nullptr) {
+        initialize();  // Initialize camera settings like position, orientation, etc
 
-        // Lambda function to render a single row (or scanline) of the image.
-        // This will be executed in parallel by different threads.
+        // Lambda function to render a single row of the image
+        // This will be executed in parallel by different threads
         auto render_row = [&](int j) {
             // Loop over each pixel in this row
             for (int i = 0; i < image_width; i++) {
@@ -40,7 +41,7 @@ public:
                 // Loop for anti-aliasing: shoot multiple rays per pixel to average the color
                 for (int sample = 0; sample < samples_per_pixel; sample++) {    
                     Ray r = get_Ray(i, j);      // Get a ray for pixel(i, j)
-                    pixel_color += ray_Color(r, max_depth, world);      // Accumulate the color
+                    pixel_color += ray_Color(r, max_depth, world, envmap);      // Accumulate the color
                 }
 
                 // Scale the pixel color based on the number of samples and write it to the SDL surface
@@ -52,15 +53,14 @@ public:
             }
         };
 
-
         // Vector to store the futures / parralel tasks
         std::vector<std::future<void>> futures;
 
         // Launch parallel tasks for each row
         for (int j = 0; j < image_height; j++) {
             // Use std::async to launch a parallel task that processes row 'j'
-            // std::launch::async ensures that this task is run asynchronously (in a separate thread).
-            // The lambda function 'render_row' is passed the row index 'j'.
+            // std::launch::async ensures that this task is run asynchronously (in a separate thread)
+            // The lambda function 'render_row' is passed the row index 'j'
             futures.push_back(std::async(std::launch::async, render_row, j));
 
             // Real-time update: Update the SDL window surface after every 10 rows (to avoid too frequent updates)
@@ -69,8 +69,8 @@ public:
             }
         }
 
-        // Loop over the vector of futures to ensure that all parallel tasks have completed.
-        // This is important because it ensures that the entire image has been rendered before moving on.
+        // Loop over the vector of futures to ensure that all parallel tasks have completed
+        // This is important because it ensures that the entire image has been rendered before moving on
         for (auto& f : futures) {
             f.get();    // Wait for each tasks (rendering of each row) to finish
         }
@@ -135,7 +135,7 @@ private:
         u = unit_Vector(cross(vup, w));
         v = cross(w, u);
 
-        // Calculate the vectors across the horizontal and down the vertical viewport edges.
+        // Calculate the vectors across the horizontal and down the vertical viewport edges
         auto viewport_u = viewport_width * u;       // Vector accross viewport horizontal edge
         auto viewport_v = viewport_height * -v;     // Vector down viewport vertical edge
 
@@ -202,7 +202,7 @@ private:
         return Ray(ray_origin, ray_direction);
     }
 
-    Color ray_Color(const Ray& r, int depth, const Hittable& world) const {
+    Color ray_Color(const Ray& r, int depth, const Hittable& world, const EnvironmentMap* envmap = nullptr) const {
         // If we've exceeded the ray bounce limit, no more light is gathered
         if (depth <= 0) {
             return Color(0,0,0);
@@ -213,19 +213,32 @@ private:
         if (world.hit(r, Interval(0.001, infinity), rec)) {
             Ray scattered;
             Color attenuation;
-            if (rec.mat->scatter(r, rec, attenuation, scattered))
-                return attenuation * ray_Color(scattered, depth-1, world);
+            if (rec.mat->scatter(r, rec, attenuation, scattered)) {
+                return attenuation * ray_Color(scattered, depth-1, world, envmap);
+            }
             return Color(0,0,0);
         }
 
-        // Simple gradient
-        // linear interpolation - lerp - between two values
-        // blendedValue = (1 - a)*startValue + a*endValue
-        // with a going from 0 to 1
-
+        // Get the unit vector of the ray
         Vec3 unit_direction = unit_Vector(r.direction());
-        auto a = 0.5*(unit_direction.y() + 1.0);
-        return (1.0-a)*Color(1.0, 1.0, 1.0) + a*Color(0.5,0.7,1.0);
+        // If an environment map was provided
+        if (envmap) {
+            // Map the direction of the ray to (u, v) texture coordinates
+            // Environment map images use spherical coordinates
+            double u = 0.5 + atan2(unit_direction.z(), unit_direction.x()) / (2*pi);
+            double v = 0.5 - asin(unit_direction.y()) / pi;
+
+            return envmap->sample(u, v);
+        }
+        else {
+            // Simple gradient
+            // linear interpolation - lerp - between two values
+            // blendedValue = (1 - a)*startValue + a*endValue
+            // with a going from 0 to 1
+
+            auto a = 0.5*(unit_direction.y() + 1.0);
+            return (1.0-a)*Color(1.0, 1.0, 1.0) + a*Color(0.5,0.7,1.0);
+        }
     }
 };
 

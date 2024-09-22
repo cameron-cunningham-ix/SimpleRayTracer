@@ -36,6 +36,8 @@ int main(int argc, char* argv[]) {
     world.add(make_shared<Sphere>(Point3(-1.0,    0.0, -1.0),   0.4, material_bubble));
     world.add(make_shared<Sphere>(Point3( 1.0,    0.0, -1.0),   0.5, material_right));
     
+    EnvironmentMap envmap("..\\include\\hdr\\texturify_court.jpg");
+
     Camera cam;
 
     cam.aspect_ratio = 16.0 / 9.0;
@@ -74,7 +76,7 @@ int main(int argc, char* argv[]) {
 
     std::cout << "Starting rendering...\n";
 
-    cam.render(world, surface);
+    cam.render(world, surface, &envmap);
 
     // Wait for the window to close
     SDL_Event e;
@@ -112,22 +114,22 @@ int main(int argc, char* argv[]) {
                     // TODO: Update lookat movement
                     // Change camera lookat
                     case SDLK_UP:
-                        cam.lookat = cam.lookat + Point3(0, 0.1, 0);
+                        cam.lookat = cam.lookat + Point3(0, 1, 0);
                         break;
                     case SDLK_DOWN:
-                        cam.lookat = cam.lookat + Point3(0, -0.1, 0);
+                        cam.lookat = cam.lookat + Point3(0, -1, 0);
                         break;
                     case SDLK_LEFT:
-                        cam.lookat = cam.lookat + Point3(-0.1, 0, 0);
+                        cam.lookat = cam.lookat + Point3(-1, 0, 0);
                         break;
                     case SDLK_RIGHT:
-                        cam.lookat = cam.lookat + Point3(0.1, 0, 0);
+                        cam.lookat = cam.lookat + Point3(1, 0, 0);
                         break;
                 }
             }
         }
 
-        cam.render(world, surface);
+        cam.render(world, surface, &envmap);
     }
 
     std::cout << "Rendering complete...\n";
