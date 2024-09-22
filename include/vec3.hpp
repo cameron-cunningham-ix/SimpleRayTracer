@@ -19,9 +19,9 @@ public:
     Vec3(double e0, double e1, double e2) : e{e0,e1,e2} {}
 
     // Getters for X, Y, Z components
-    double x() const {return e[0];}
-    double y() const {return e[1];}
-    double z() const {return e[2];}
+    double x() const { return e[0]; }
+    double y() const { return e[1]; }
+    double z() const { return e[2]; }
 
     // Negates the vector
     Vec3 operator-() const {return Vec3(-e[0], -e[1], -e[2]);}

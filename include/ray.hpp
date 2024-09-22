@@ -5,15 +5,17 @@
 
 class Ray {
 public:
-    // Default constructor 
+    // Default constructor, uninitialized origin and dir
     Ray() {}
 
-    // Constructor 
+    // Constructor, initializes ray with provided origin and direction
     Ray(const Point3& origin, const Vec3& direction) : orig(origin), dir(direction) {}
 
-    const Point3& origin() const {return orig;}
-    const Vec3& direction() const {return dir;}
+    // Getters for origin and direction of ray
+    const Point3& origin() const { return orig; }
+    const Vec3& direction() const { return dir; }
     
+    // Returns the 3D point along the ray at "distance" t
     Point3 at(double t) const {
         return orig + t*dir;
     }

@@ -8,8 +8,9 @@
 #include "material.hpp"
 #include "environmentmap.hpp"
 
-#include <future>   // For std::async
-#include <vector>   // For std::vector to store futures
+#include <future>       // For std::async
+#include <vector>       // For std::vector to store futures
+#include <algorithm>
 
 class Camera {
 public:
@@ -20,6 +21,8 @@ public:
     int max_depth = 10;          // Maximum number of ray bounces into scene
 
     double vfov = 90;                   // Vertical view angle (field of view)
+    double yaw = 0;
+    double pitch = 0;
     Point3 lookfrom = Point3(0,0,0);    // Point camera is looking from
     Point3 lookat = Point3(0,0,-1);     // Point camera is looking to
     Vec3 vup = Vec3(0,1,0);             // Camera-relative "up" direction
@@ -96,12 +99,31 @@ public:
         
         if (move_by.x() != 0){
             lookfrom += right * move_by;
+            lookat += right * move_by;
         }
         if (move_by.z() != 0){
             lookfrom += forward * move_by;
+            lookat += forward * move_by;
         }
         //printf("lookfrom: %f, %f, %f\n\n\n", lookfrom.x(), lookfrom.y(), lookfrom.z());
     }
+
+    // NOT DONE YET
+    //
+    void update_Camera_Direction(double delta_yaw, double delta_pitch){
+        yaw += delta_yaw;
+        pitch += delta_pitch;
+
+        // Limit the pitch to avoid flipping
+        pitch = std::clamp(pitch, -89.0, 89.0);
+
+        lookat.e[0] += cos(yaw) * cos(pitch);
+        lookat.e[1] += sin(pitch);
+        lookat.e[2] += sin(yaw) * cos(pitch);
+
+    }
+
+    
 
 private:
     int image_height;           // Rendered image height

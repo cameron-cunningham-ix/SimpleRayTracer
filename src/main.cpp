@@ -21,7 +21,6 @@ int main(int argc, char* argv[]) {
 
     std::cout << "Starting program...\n";
     
-
     Hittable_List world;
 
     auto material_ground = make_shared<Lambertian>(Color(0.9, 0.8, 0.3));
@@ -30,11 +29,10 @@ int main(int argc, char* argv[]) {
     auto material_bubble = make_shared<Dielectric>(1.00 / 1.50);
     auto material_right  = make_shared<Metal>(Color(0.8, 0.6, 0.2), 1.0);
 
-    world.add(make_shared<Sphere>(Point3( 0.0, -50.5, -1.0), 50.0, material_ground));
-    //world.add(make_shared<Sphere>(Point3( 0.0,    0.0, -1.2),   2.5, material_center));
+    world.add(make_shared<Sphere>(Point3( 0.0, -50.5, 1.0), 50.0, material_ground));
     //world.add(make_shared<Sphere>(Point3(-1.0,    0.0, -1.0),   0.5, material_left));
-    world.add(make_shared<Sphere>(Point3(-1.0,    0.0, -1.0),   0.4, material_bubble));
-    world.add(make_shared<Sphere>(Point3( 1.0,    0.0, -1.0),   0.5, material_right));
+    world.add(make_shared<Sphere>(Point3(-1.0,    0.0, 1.0),   0.4, material_bubble));
+    world.add(make_shared<Sphere>(Point3( 1.0,    0.0, 1.0),   0.5, material_right));
     
     EnvironmentMap envmap("..\\include\\hdr\\texturify_court.jpg");
 
@@ -42,12 +40,12 @@ int main(int argc, char* argv[]) {
 
     cam.aspect_ratio = 16.0 / 9.0;
     cam.image_width = 400;
-    cam.samples_per_pixel = 1;      // For "real-time" rendering, set samples_per_pixel to 1 and max_depth to 2
-    cam.max_depth = 2;              // NOTE: max_depth minimum is 2; if set to one, it only colors pixels that did not hit anything
+    cam.samples_per_pixel = 2;      // For "real-time" rendering, set samples_per_pixel to 1 and max_depth to 2
+    cam.max_depth = 4;              // NOTE: max_depth minimum is 2; if set to one, it only colors pixels that did not hit anything
 
     cam.vfov = 45;
     cam.lookfrom = Point3(0,0,0);
-    cam.lookat - Point3(0,0,1);
+    cam.lookat = Point3(0,0,1);
     cam.vup = Vec3(0,1,0);
 
     cam.defocus_angle = 1.0;
@@ -114,16 +112,19 @@ int main(int argc, char* argv[]) {
                     // TODO: Update lookat movement
                     // Change camera lookat
                     case SDLK_UP:
-                        cam.lookat = cam.lookat + Point3(0, 1, 0);
+                        cam.update_Camera_Direction(0, 0.1);
+                        //cam.lookat = cam.lookat + Point3(0, 1, 0);
                         break;
                     case SDLK_DOWN:
-                        cam.lookat = cam.lookat + Point3(0, -1, 0);
+                        cam.update_Camera_Direction(0, -0.1);
                         break;
                     case SDLK_LEFT:
-                        cam.lookat = cam.lookat + Point3(-1, 0, 0);
+                        cam.update_Camera_Direction(-0.1, 0);
+                        //cam.lookat = cam.lookat + Point3(1, 0, 0);
                         break;
                     case SDLK_RIGHT:
-                        cam.lookat = cam.lookat + Point3(1, 0, 0);
+                        cam.update_Camera_Direction(0.1, 0);
+                        //cam.lookat = cam.lookat + Point3(-1, 0, 0);
                         break;
                 }
             }
