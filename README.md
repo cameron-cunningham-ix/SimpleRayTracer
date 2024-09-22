@@ -42,16 +42,16 @@ Running the Ray Tracer
 
 After building the project, you can run the ray tracer from the build directory:
 
-    Debug/SimpleRayTracer.exe
+    Debug\SimpleRayTracer.exe
 
 Once launched, the SDL window will open and start displaying the image as it’s progressively rendered.
 
 Project Structure
 
-    src/ - Contains the source files for the ray tracer
-    include/ - Header files for the ray tracer, environmap pictures
+    src\ - Contains the source files for the ray tracer
+    include\ - Header files for the ray tracer, environmap pictures
     CMakeLists.txt - CMake build configuration
-    third_party/ - External libraries and dependencies (SDL2, stb_image)
+    third_party\ - External libraries and dependencies (SDL2, stb_image)
 
 Future Improvements
 
