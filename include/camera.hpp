@@ -9,7 +9,6 @@
 
 #include <future>   // For std::async
 #include <vector>   // For std::vector to store futures
-#include <sstream>  // For stringstream to handle row output
 
 class Camera {
 public:
@@ -23,6 +22,7 @@ public:
     Point3 lookfrom = Point3(0,0,0);    // Point camera is looking from
     Point3 lookat = Point3(0,0,-1);     // Point camera is looking to
     Vec3 vup = Vec3(0,1,0);             // Camera-relative "up" direction
+    
 
     double defocus_angle = 0;    // Variation angle of rays through each pixel
     double focus_dist = 10;     // Distance from camera lookfrom point to plane of perfect focus
@@ -33,8 +33,6 @@ public:
         // Lambda function to render a single row (or scanline) of the image.
         // This will be executed in parallel by different threads.
         auto render_row = [&](int j) {
-            std::stringstream row_output;  // String stream to accumulate pixel data for this row
-
             // Loop over each pixel in this row
             for (int i = 0; i < image_width; i++) {
                 Color pixel_color(0, 0, 0);     // Initialize pixel color
@@ -86,6 +84,25 @@ public:
         return image_height;
     }
 
+    // TODO: This is still awkward, this might not be the right implementation
+    // Wait until more shapes are supported, so there's better visual reference than spheres
+    
+    // Alter the camera position
+    void update_Camera_Position(Vec3 move_by){
+        Vec3 forward = unit_Vector(lookat - lookfrom);
+        Vec3 right = unit_Vector(cross(vup, forward));
+        //printf("forward: %f, %f, %f\n", forward.x(), forward.y(), forward.z());
+        //printf("right: %f, %f, %f\n", right.x(), right.y(), right.z());
+        
+        if (move_by.x() != 0){
+            lookfrom += right * move_by;
+        }
+        if (move_by.z() != 0){
+            lookfrom += forward * move_by;
+        }
+        //printf("lookfrom: %f, %f, %f\n\n\n", lookfrom.x(), lookfrom.y(), lookfrom.z());
+    }
+
 private:
     int image_height;           // Rendered image height
     double pixel_samples_scale; // Color scale factor for a sum of pixel samples
@@ -97,6 +114,7 @@ private:
     Vec3 defocus_disk_u;        // Defocus disk horizontal radius
     Vec3 defocus_disk_v;        // Defocus disk vertical radius
 
+    // Initialize camera settings
     void initialize() {
         // Calculate image height and make sure that it's at least 1
         image_height = int(image_width/aspect_ratio);
@@ -133,11 +151,10 @@ private:
         auto defocus_radius = focus_dist * tan(degrees_to_radians(defocus_angle / 2));
         defocus_disk_u = u * defocus_radius;
         defocus_disk_v = v * defocus_radius;
-
     }
 
-    Vec3 sample_Square() const {
-        // Returns the vector to a random point in the [-.5,-.5]-[+.5,+.5] unit square
+    // Returns the vector to a random point in the [-.5,-.5]-[+.5,+.5] unit square
+    Vec3 sample_Square() const {    
         return Vec3(random_double() - 0.5, random_double() - 0.5, 0);
     }
 
@@ -156,13 +173,13 @@ private:
         return Ray(ray_origin, ray_direction);
     }
 
-    Point3 defocus_Disk_Sample() const {
-        // returns a random point in the camera defocus disk
+    // Returns a random point in the camera defocus disk
+    Point3 defocus_Disk_Sample() const {    
         auto p = random_In_Unit_Disk();
         return center + (p[0] * defocus_disk_u) + (p[1] * defocus_disk_v);
     }
 
-    Ray get_Ray_Consistent(int i, int j, int samples){
+    Ray get_Ray_Consistent(int i, int j, int samples){    
         // Construct a camera ray originating from the origin and directed at a consistent sampled
         // point around the pixel location i, j based on the # of samples_per_pixel
         Vec3 offset;

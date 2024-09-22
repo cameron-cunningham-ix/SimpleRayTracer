@@ -16,6 +16,7 @@
 #include "material.hpp"
 #include "sphere.hpp"
 
+
 int main(int argc, char* argv[]) {
 
     std::cout << "Starting program...\n";
@@ -29,7 +30,7 @@ int main(int argc, char* argv[]) {
     auto material_bubble = make_shared<Dielectric>(1.00 / 1.50);
     auto material_right  = make_shared<Metal>(Color(0.8, 0.6, 0.2), 1.0);
 
-    world.add(make_shared<Sphere>(Point3( 0.0, -100.5, -1.0), 100.0, material_ground));
+    world.add(make_shared<Sphere>(Point3( 0.0, -50.5, -1.0), 50.0, material_ground));
     //world.add(make_shared<Sphere>(Point3( 0.0,    0.0, -1.2),   2.5, material_center));
     //world.add(make_shared<Sphere>(Point3(-1.0,    0.0, -1.0),   0.5, material_left));
     world.add(make_shared<Sphere>(Point3(-1.0,    0.0, -1.0),   0.4, material_bubble));
@@ -38,7 +39,7 @@ int main(int argc, char* argv[]) {
     Camera cam;
 
     cam.aspect_ratio = 16.0 / 9.0;
-    cam.image_width = 800;
+    cam.image_width = 400;
     cam.samples_per_pixel = 1;      // For "real-time" rendering, set samples_per_pixel to 1 and max_depth to 2
     cam.max_depth = 2;              // NOTE: max_depth minimum is 2; if set to one, it only colors pixels that did not hit anything
 
@@ -74,8 +75,6 @@ int main(int argc, char* argv[]) {
     std::cout << "Starting rendering...\n";
 
     cam.render(world, surface);
-   
-    std::cout << "Rendering complete...\n";
 
     // Wait for the window to close
     SDL_Event e;
@@ -88,28 +87,29 @@ int main(int argc, char* argv[]) {
             if (e.type == SDL_KEYDOWN){
                 switch(e.key.keysym.sym){
 
-                    // TODO: Alter the camera position based on lookat value as well
-
                     // Change camera position
                     case SDLK_a:
-                        cam.lookfrom += (cam.lookat - cam.lookfrom)*Point3(0, 0, 0.1);
+                        cam.update_Camera_Position(Vec3(0, 0, -0.5));
                         break;
                     case SDLK_d:
-                        cam.lookfrom = cam.lookfrom + Point3(0, 0, -0.1);
+                        cam.update_Camera_Position(Vec3(0, 0, 0.5));
                         break;
                     case SDLK_w:
-                        cam.lookfrom = cam.lookfrom + Point3(0.1, 0, 0);
+                        cam.update_Camera_Position(Vec3(-0.5, 0, 0));
                         break;
                     case SDLK_s:
-                        cam.lookfrom = cam.lookfrom + Point3(-0.1, 0, 0);
+                        cam.update_Camera_Position(Vec3(0.5, 0, 0));
                         break;
                     case SDLK_SPACE:
-                        cam.lookfrom = cam.lookfrom + Point3(0, 0.1, 0);
+                        cam.lookfrom += Point3(0, 0.1, 0);
+                        cam.lookat += Point3(0, 0.1, 0);
                         break;
                     case SDLK_LSHIFT:
-                        cam.lookfrom = cam.lookfrom + Point3(0, -0.1, 0);
+                        cam.lookfrom += Point3(0, -0.1, 0);
+                        cam.lookat += Point3(0, -0.1, 0);
                         break;
                     
+                    // TODO: Update lookat movement
                     // Change camera lookat
                     case SDLK_UP:
                         cam.lookat = cam.lookat + Point3(0, 0.1, 0);
@@ -129,6 +129,8 @@ int main(int argc, char* argv[]) {
 
         cam.render(world, surface);
     }
+
+    std::cout << "Rendering complete...\n";
 
     // Clean up
     SDL_DestroyWindow(window);
