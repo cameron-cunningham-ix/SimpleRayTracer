@@ -42,7 +42,7 @@ Running the Ray Tracer
 
 After building the project, you can run the ray tracer from the build directory:
 
-    .Debug/SimpleRayTracer.exe
+    Debug/SimpleRayTracer.exe
 
 Once launched, the SDL window will open and start displaying the image as it’s progressively rendered.
 
