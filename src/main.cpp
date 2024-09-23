@@ -73,6 +73,8 @@ int main(int argc, char* argv[]) {
     SDL_Surface* surface = SDL_GetWindowSurface(window);
 
     std::cout << "Starting rendering...\n";
+    std::cout << "Use WASD to move camera position,\nuse arrow keys to move camera direction\n";
+    std::cout << "Hit ESCAPE to close the program.";
 
     cam.render(world, surface, &envmap);
 
@@ -86,45 +88,41 @@ int main(int argc, char* argv[]) {
             }
             if (e.type == SDL_KEYDOWN){
                 switch(e.key.keysym.sym){
-
+                    case SDLK_ESCAPE:
+                        quit = true;
+                        break;
                     // Change camera position
                     case SDLK_a:
-                        cam.update_Camera_Position(Vec3(0, 0, -0.5));
-                        break;
-                    case SDLK_d:
-                        cam.update_Camera_Position(Vec3(0, 0, 0.5));
-                        break;
-                    case SDLK_w:
                         cam.update_Camera_Position(Vec3(-0.5, 0, 0));
                         break;
-                    case SDLK_s:
+                    case SDLK_d:
                         cam.update_Camera_Position(Vec3(0.5, 0, 0));
                         break;
+                    case SDLK_w:
+                        cam.update_Camera_Position(Vec3(0, 0, 0.5));
+                        break;
+                    case SDLK_s:
+                        cam.update_Camera_Position(Vec3(0, 0, -0.5));
+                        break;
                     case SDLK_SPACE:
-                        cam.lookfrom += Point3(0, 0.1, 0);
-                        cam.lookat += Point3(0, 0.1, 0);
+                        cam.update_Camera_Position(Vec3(0, 0.5, 0));
                         break;
                     case SDLK_LSHIFT:
-                        cam.lookfrom += Point3(0, -0.1, 0);
-                        cam.lookat += Point3(0, -0.1, 0);
+                        cam.update_Camera_Position(Vec3(0, -0.5, 0));
                         break;
                     
-                    // TODO: Update lookat movement
-                    // Change camera lookat
+                    // Change camera direction
                     case SDLK_UP:
-                        cam.update_Camera_Direction(0, 0.1);
-                        //cam.lookat = cam.lookat + Point3(0, 1, 0);
-                        break;
-                    case SDLK_DOWN:
                         cam.update_Camera_Direction(0, -0.1);
                         break;
+                    case SDLK_DOWN:
+                        cam.update_Camera_Direction(0, 0.1);
+                        break;
                     case SDLK_LEFT:
-                        cam.update_Camera_Direction(-0.1, 0);
-                        //cam.lookat = cam.lookat + Point3(1, 0, 0);
+                        cam.update_Camera_Direction(0.1, 0);
                         break;
                     case SDLK_RIGHT:
-                        cam.update_Camera_Direction(0.1, 0);
-                        //cam.lookat = cam.lookat + Point3(-1, 0, 0);
+                        cam.update_Camera_Direction(-0.1, 0);
                         break;
                 }
             }

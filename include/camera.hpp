@@ -21,8 +21,6 @@ public:
     int max_depth = 10;          // Maximum number of ray bounces into scene
 
     double vfov = 90;                   // Vertical view angle (field of view)
-    double yaw = 0;
-    double pitch = 0;
     Point3 lookfrom = Point3(0,0,0);    // Point camera is looking from
     Point3 lookat = Point3(0,0,-1);     // Point camera is looking to
     Vec3 vup = Vec3(0,1,0);             // Camera-relative "up" direction
@@ -87,40 +85,73 @@ public:
         return image_height;
     }
 
-    // TODO: This is still awkward, this might not be the right implementation
-    // Wait until more shapes are supported, so there's better visual reference than spheres
-    
     // Alter the camera position
-    void update_Camera_Position(Vec3 move_by){
-        Vec3 forward = unit_Vector(lookat - lookfrom);
-        Vec3 right = unit_Vector(cross(vup, forward));
-        //printf("forward: %f, %f, %f\n", forward.x(), forward.y(), forward.z());
+    // move_by component values correspond to speed in that direction relative to camera view
+    void update_Camera_Position(Vec3 move_by) {
+        // Calculate direction camera is looking in
+        Vec3 direction = unit_Vector(lookat - lookfrom);
+        Vec3 right = unit_Vector(cross(direction, vup));
+        //printf("direction: %f, %f, %f\n", direction.x(), direction.y(), direction.z());
         //printf("right: %f, %f, %f\n", right.x(), right.y(), right.z());
         
-        if (move_by.x() != 0){
-            lookfrom += right * move_by;
-            lookat += right * move_by;
+        // Move camera left / right relative to orientation
+        if (move_by.x() != 0) {
+            lookfrom += right * move_by.x();
+            lookat += right * move_by.x();
         }
-        if (move_by.z() != 0){
-            lookfrom += forward * move_by;
-            lookat += forward * move_by;
+        // Move camera foward / backward relative to direction
+        if (move_by.z() != 0) {
+            lookfrom += direction * move_by.z();
+            lookat += direction * move_by.z();
+        }
+        // Move camera up / down relative to direction
+        if (move_by.y() != 0) {
+            lookfrom += vup * move_by.y();
+            lookat += vup * move_by.y();
         }
         //printf("lookfrom: %f, %f, %f\n\n\n", lookfrom.x(), lookfrom.y(), lookfrom.z());
     }
 
     // NOT DONE YET
-    //
-    void update_Camera_Direction(double delta_yaw, double delta_pitch){
-        yaw += delta_yaw;
-        pitch += delta_pitch;
+    // There's still some unwanted behaviour when pitching up / down
+    void update_Camera_Direction(double delta_yaw, double delta_pitch) {
+        // Calculate direction camera is looking in
+        Vec3 direction = lookat - lookfrom;
 
-        // Limit the pitch to avoid flipping
-        pitch = std::clamp(pitch, -89.0, 89.0);
+        // Rotate around Y-axis for yaw (l-r rotation)
+        double cos_yaw = cos(delta_yaw);
+        double sin_yaw = sin(delta_yaw);
 
-        lookat.e[0] += cos(yaw) * cos(pitch);
-        lookat.e[1] += sin(pitch);
-        lookat.e[2] += sin(yaw) * cos(pitch);
+        // Apply rotation matrix
+        //
+        // [  cos yaw, 0, sin yaw ]
+        // |  0,       1, 0       |
+        // [ -sin yaw, 0, cos yaw ]
+        Vec3 rotated_dir_yaw = Vec3(
+            cos_yaw * direction.x() + sin_yaw * direction.z(),
+            direction.y(),
+            -sin_yaw * direction.x() + cos_yaw * direction.z()
+        );
 
+        // Rotate around right vector for pitch (up-down rotation)
+        Vec3 right = unit_Vector(cross(rotated_dir_yaw, vup));
+        double cos_pitch = cos(delta_pitch);
+        double sin_pitch = sin(delta_pitch);
+
+        // Apply rotation matrix
+        //
+        // [  1,         0, 0          ]
+        // |  0, cos pitch, -sin pitch |
+        // [  0, sin pitch, cos pitch  ]
+        Vec3 rotated_dir_pit = Vec3(
+            rotated_dir_yaw.x(),
+            cos_pitch * rotated_dir_yaw.y() - sin_pitch * rotated_dir_yaw.z(),
+            sin_pitch * rotated_dir_yaw.y() + cos_pitch * rotated_dir_yaw.z()
+        );
+
+        lookat = lookfrom + rotated_dir_pit;
+
+        //printf("lookat: %f, %f, %f\n\n", lookat.x(), lookat.y(), lookat.z());
     }
 
     
@@ -201,11 +232,11 @@ private:
         return center + (p[0] * defocus_disk_u) + (p[1] * defocus_disk_v);
     }
 
-    Ray get_Ray_Consistent(int i, int j, int samples){    
+    Ray get_Ray_Consistent(int i, int j, int samples) {    
         // Construct a camera ray originating from the origin and directed at a consistent sampled
         // point around the pixel location i, j based on the # of samples_per_pixel
         Vec3 offset;
-        if (samples % 2 == 0){
+        if (samples % 2 == 0) {
             // Bottom left to top right
             offset = Vec3(samples/samples_per_pixel - 0.5, samples/samples_per_pixel - 0.5, 0);
         } else {
