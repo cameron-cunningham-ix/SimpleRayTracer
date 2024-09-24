@@ -16,6 +16,7 @@
 #include "material.hpp"
 #include "sphere.hpp"
 
+#include <string>
 
 int main(int argc, char* argv[]) {
 
@@ -36,20 +37,37 @@ int main(int argc, char* argv[]) {
     
     EnvironmentMap envmap("..\\include\\hdr\\texturify_court.jpg");
 
+    // 
+    std::cout << "\nCamera Settings\n'Real-time' rendering (interactive): Enter A.\n"
+            << "(CURRENTLY BUGGY!) Single render with settings: Enter B\n"
+            << "Input: ";
+
+    std::string input;
+    bool real_time_rendering = true;
+
+    std::cin >> input;
+    while (input.compare("A") && input.compare("B")){
+        std::cout << "\nInvalid input"
+                << "\n'Real-time' rendering (interactive): Enter A:\nSingle render with settings: Enter B\n"
+                << "Input: ";
+        std::cin >> input;
+    }
+    
     Camera cam;
 
-    cam.aspect_ratio = 16.0 / 9.0;
-    cam.image_width = 400;
-    cam.samples_per_pixel = 2;      // For "real-time" rendering, set samples_per_pixel to 1 and max_depth to 2
-    cam.max_depth = 4;              // NOTE: max_depth minimum is 2; if set to one, it only colors pixels that did not hit anything
+    if (input == "A"){
+        cam.init_Real_Time_Settings();
+        std::cout << "Starting rendering...\n"
+                << "Use WASD to move camera position,\nuse arrow keys to move camera direction\n"
+                << "Hit ESCAPE to close the program.\n";
+    }
+    else if (input == "B"){
+        real_time_rendering = false;
+        cam.init_Custom_Settings();
 
-    cam.vfov = 45;
-    cam.lookfrom = Point3(0,0,0);
-    cam.lookat = Point3(0,0,1);
-    cam.vup = Vec3(0,1,0);
+        std::cout << "Hit ESCAPE to close the program.\n";
+    }
 
-    cam.defocus_angle = 1.0;
-    cam.focus_dist = 3.4;
 
     std::cout << "Starting SDL...\n";
 
@@ -70,11 +88,9 @@ int main(int argc, char* argv[]) {
         return -1;
     }
 
-    SDL_Surface* surface = SDL_GetWindowSurface(window);
+    SDL_RaiseWindow(window);
 
-    std::cout << "Starting rendering...\n";
-    std::cout << "Use WASD to move camera position,\nuse arrow keys to move camera direction\n";
-    std::cout << "Hit ESCAPE to close the program.";
+    SDL_Surface* surface = SDL_GetWindowSurface(window);
 
     cam.render(world, surface, &envmap);
 
@@ -128,7 +144,10 @@ int main(int argc, char* argv[]) {
             }
         }
 
-        cam.render(world, surface, &envmap);
+        if (real_time_rendering){ 
+            cam.render(world, surface, &envmap);
+        }
+        
     }
 
     std::cout << "Rendering complete...\n";
