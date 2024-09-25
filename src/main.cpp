@@ -28,7 +28,7 @@ int main(int argc, char* argv[]) {
     auto material_center = make_shared<Lambertian>(Color(0.1, 0.5, 0.5));
     auto material_left   = make_shared<Dielectric>(1.50);
     auto material_bubble = make_shared<Dielectric>(1.00 / 1.50);
-    auto material_right  = make_shared<Metal>(Color(0.8, 0.6, 0.2), 1.0);
+    auto material_right  = make_shared<Metal>(Color(0.8, 0.6, 0.2), 0.1);
 
     world.add(make_shared<Sphere>(Point3( 0.0, -50.5, 1.0), 50.0, material_ground));
     //world.add(make_shared<Sphere>(Point3(-1.0,    0.0, -1.0),   0.5, material_left));
@@ -38,7 +38,7 @@ int main(int argc, char* argv[]) {
     EnvironmentMap envmap("..\\include\\hdr\\texturify_court.jpg");
 
     // 
-    std::cout << "\nCamera Settings\n'Real-time' rendering (interactive): Enter A.\n"
+    std::cout << "\nCamera Settings\n'Real-time' rendering (interactive): Enter A\n"
             << "(CURRENTLY BUGGY!) Single render with settings: Enter B\n"
             << "Input: ";
 
@@ -88,15 +88,16 @@ int main(int argc, char* argv[]) {
         return -1;
     }
 
-    SDL_RaiseWindow(window);
-
     SDL_Surface* surface = SDL_GetWindowSurface(window);
 
-    cam.render(world, surface, &envmap);
+    SDL_RaiseWindow(window);
+
+    //cam.render(world, surface, &envmap);
 
     // Wait for the window to close
     SDL_Event e;
     bool quit = false;
+    int frame = real_time_rendering ? 0 : 1;
     while (!quit) {
         while (SDL_PollEvent(&e) != 0) {
             if (e.type == SDL_QUIT) {
@@ -143,11 +144,15 @@ int main(int argc, char* argv[]) {
                 }
             }
         }
+        // For rendering single frame
+        if (frame == 1){
+            cam.render(world, surface, &envmap);
+            frame--;
+        }
 
         if (real_time_rendering){ 
             cam.render(world, surface, &envmap);
         }
-        
     }
 
     std::cout << "Rendering complete...\n";

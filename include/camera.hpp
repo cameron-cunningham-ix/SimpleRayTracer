@@ -166,6 +166,7 @@ public:
 
         // Final update to ensure all rows are drawn
         SDL_UpdateWindowSurface(SDL_GetWindowFromID(1));
+        //SDL_Delay(16);
     }
 
 
