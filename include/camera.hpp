@@ -8,9 +8,10 @@
 #include "material.hpp"
 #include "environmentmap.hpp"
 
-#include <future>       // For std::async
-#include <vector>       // For std::vector to store futures
-#include <algorithm>
+#include <atomic>
+#include <thread>
+#include <mutex>
+#include <vector>
 
 class Camera {
 public:
@@ -34,7 +35,7 @@ public:
         image_width = 400;
         samples_per_pixel = 2;      // For "real-time" rendering, set samples_per_pixel to 2 and max_depth to 4
         max_depth = 4;              // NOTE: max_depth absolute minimum is 2; if set to one, it only colors pixels that did not hit anything
-                                    // max_depth = 3 gets rid of some reflections as well
+                                    // max_depth = 3 gets rid of some important reflections as well
         vfov = 45;
         lookfrom = Point3(0,0,-1);
         lookat = Point3(0,0,1);
@@ -44,9 +45,6 @@ public:
         focus_dist = 3.4;
     }
 
-
-    // TODO: This is having weird bugs with the window not popping and not 
-    // rendering the full image.
     // Initialize custom camera settings
     void init_Custom_Settings() {
         std::string input;
@@ -116,56 +114,57 @@ public:
         }
     }
 
-    void render(const Hittable& world, SDL_Surface* surface, const EnvironmentMap* envmap = nullptr) {
-        initialize();  // Initialize camera settings like position, orientation, etc
+    void render(const Hittable& world, SDL_Surface* surface, const EnvironmentMap* envmap, std::atomic<bool>& rendering_complete) {
+        initialize();
 
-        // Lambda function to render a single row of the image
-        // This will be executed in parallel by different threads
-        auto render_row = [&](int j) {
-            // Loop over each pixel in this row
-            for (int i = 0; i < image_width; i++) {
-                Color pixel_color(0, 0, 0);     // Initialize pixel color
+        // Determine the number of threads to use based on hardware
+        const int num_threads = std::thread::hardware_concurrency();
+        std::vector<std::thread> threads;
+        
+        // Mutex to protect access to the shared SDL surface
+        std::mutex surface_mutex;
 
-                // Loop for anti-aliasing: shoot multiple rays per pixel to average the color
-                for (int sample = 0; sample < samples_per_pixel; sample++) {    
-                    Ray r = get_Ray(i, j);      // Get a ray for pixel(i, j)
-                    pixel_color += ray_Color(r, max_depth, world, envmap);      // Accumulate the color
+        // Lambda function to render a section of the image
+        auto render_section = [&](int start_row, int end_row) {
+            for (int j = start_row; j < end_row; j++) {
+                for (int i = 0; i < image_width; i++) {
+                    Color pixel_color(0, 0, 0);
+                    // Calculate current pixel color
+                    for (int sample = 0; sample < samples_per_pixel; sample++) {
+                        Ray r = get_Ray(i, j);
+                        pixel_color += ray_Color(r, max_depth, world, envmap);
+                    }
+
+                    // Convert the color to SDL format
+                    Uint32 color = SDL_MapRGB(surface->format,
+                        static_cast<Uint8>(255.999 * pixel_samples_scale * pixel_color.x()),
+                        static_cast<Uint8>(255.999 * pixel_samples_scale * pixel_color.y()),
+                        static_cast<Uint8>(255.999 * pixel_samples_scale * pixel_color.z()));
+
+                    // Lock the mutex before accessing the shared surface
+                    std::lock_guard<std::mutex> lock(surface_mutex);
+                    Uint32* pixels = (Uint32*)surface->pixels;
+                    pixels[j * image_width + i] = color;
                 }
-
-                // Scale the pixel color based on the number of samples and write it to the SDL surface
-                Uint32* pixels = (Uint32*)surface->pixels;
-                pixels[j * image_width + i] = SDL_MapRGB(surface->format,
-                    static_cast<Uint8>(255.999 * pixel_samples_scale * pixel_color.x()),
-                    static_cast<Uint8>(255.999 * pixel_samples_scale * pixel_color.y()),
-                    static_cast<Uint8>(255.999 * pixel_samples_scale * pixel_color.z()));
             }
         };
 
-        // Vector to store the futures / parralel tasks
-        std::vector<std::future<void>> futures;
-
-        // Launch parallel tasks for each row
-        for (int j = 0; j < image_height; j++) {
-            // Use std::async to launch a parallel task that processes row 'j'
-            // std::launch::async ensures that this task is run asynchronously (in a separate thread)
-            // The lambda function 'render_row' is passed the row index 'j'
-            futures.push_back(std::async(std::launch::async, render_row, j));
-
-            // Real-time update: Update the SDL window surface after every 32 rows (to avoid too frequent updates)
-            if (j % 32 == 0) {
-                SDL_UpdateWindowSurface(SDL_GetWindowFromID(1));  // Update the SDL window surface
-            }
+        // Divide the image into sections and assign each to a thread
+        int rows_per_thread = image_height / num_threads;
+        for (int i = 0; i < num_threads; i++) {
+            int start_row = i * rows_per_thread;
+            // Ensure the last thread covers any remaining rows
+            int end_row = (i == num_threads - 1) ? image_height : (i + 1) * rows_per_thread;
+            threads.emplace_back(render_section, start_row, end_row);
         }
 
-        // Loop over the vector of futures to ensure that all parallel tasks have completed
-        // This is important because it ensures that the entire image has been rendered before moving on
-        for (auto& f : futures) {
-            f.get();    // Wait for each tasks (rendering of each row) to finish
+        // Wait for all threads to complete
+        for (auto& thread : threads) {
+            thread.join();
         }
 
-        // Final update to ensure all rows are drawn
-        SDL_UpdateWindowSurface(SDL_GetWindowFromID(1));
-        //SDL_Delay(16);
+        // Signal that rendering is complete
+        rendering_complete.store(true);
     }
 
 
