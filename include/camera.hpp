@@ -116,7 +116,6 @@ public:
         }
     }
 
-
     void render(const Hittable& world, SDL_Surface* surface, const EnvironmentMap* envmap = nullptr) {
         initialize();  // Initialize camera settings like position, orientation, etc
 
