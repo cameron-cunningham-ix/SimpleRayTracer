@@ -45,40 +45,41 @@ int main(int argc, char* argv[]) {
     auto material_center = make_shared<Lambertian>(Color(0.1, 0.5, 0.5));
     auto material_left   = make_shared<Dielectric>(1.50);
     auto material_bubble = make_shared<Dielectric>(1.00 / 1.50);
-    auto material_right  = make_shared<Metal>(Color(0.8, 0.6, 0.2), 0.1);
+    auto material_right  = make_shared<Metal>(Color(0.8, 0.8, 0.9), 0.05);
 
     world.add(make_shared<Sphere>(Point3( 0.0, -50.5, 1.0), 50.0, material_ground));
     //world.add(make_shared<Sphere>(Point3(-1.0,    0.0, -1.0),   0.5, material_left));
     world.add(make_shared<Sphere>(Point3(-1.0,    0.0, 1.0),   0.4, material_bubble));
     world.add(make_shared<Sphere>(Point3( 1.0,    0.0, 1.0),   0.5, material_right));
     
+    // Environment map object for lighting
     EnvironmentMap envmap("..\\include\\hdr\\texturify_court.jpg");
-
-    std::cout << "\nCamera Settings\n'Real-time' rendering (interactive): Enter A\n"
-            << "(CURRENTLY BUGGY!) Single render with settings: Enter B\n"
-            << "Input: ";
 
     std::string input;
     bool real_time_rendering = true;
 
+    std::cout << "\nCamera Settings\n'Real-time' rendering (interactive): Enter A\n"
+            << "Single high-quality render with settings: Enter B\n"
+            << "Input: ";
+
     std::cin >> input;
-    while (input.compare("A") && input.compare("B")){
+    while (input.compare("A") && input.compare("B")) {
         std::cout << "\nInvalid input"
                 << "\n'Real-time' rendering (interactive): Enter A:\nSingle render with settings: Enter B\n"
                 << "Input: ";
         std::cin >> input;
     }
     
-    // Create and initialize Camera object
+    // Create and initialize Camera object settings
     Camera cam;
 
-    if (input == "A"){
+    if (input == "A") {
         cam.init_Real_Time_Settings();
         std::cout << "Starting rendering...\n"
                 << "Use WASD to move camera position,\nuse arrow keys to move camera direction\n"
                 << "Hit ESCAPE to close the program.\n";
     }
-    else if (input == "B"){
+    else if (input == "B") {
         real_time_rendering = false;
         cam.init_Custom_Settings();
 

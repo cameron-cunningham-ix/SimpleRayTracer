@@ -148,9 +148,9 @@ inline Vec3 random_In_Unit_Sphere() {
 }
 
 // Returns a random Vec3 in the X-Y plane inside a unit disk
-inline Vec3 random_In_Unit_Disk() {
+inline Vec3 random_In_Unit_Disk(std::mt19937 &gen, std::uniform_real_distribution<double> &dist) {
     while (true) {
-        Vec3 p = Vec3(random_double(-1,1), random_double(-1,1), 0);
+        Vec3 p = Vec3(dist(gen), dist(gen), 0);
         if (p.length_Squared() < 1) {
             return p;
         }

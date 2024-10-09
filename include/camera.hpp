@@ -12,6 +12,7 @@
 #include <thread>
 #include <mutex>
 #include <vector>
+#include <random>
 
 class Camera {
 public:
@@ -124,15 +125,30 @@ public:
         // Mutex to protect access to the shared SDL surface
         std::mutex surface_mutex;
 
+        // std::seed_seq is a class that generates a sequence of seeds from a set
+        // of initial values. Initialize it with a fixed seed
+        std::seed_seq seed{0};
+
+        // Create a vector of random number generators, one for each thread
+        std::vector<std::mt19937> generators(num_threads);
+        for (int i = 0; i < num_threads; i++) {
+            generators[i].seed(seed);
+            // Advance the generator a different amount for each thread
+            generators[i].discard(i);
+        }
+
         // Lambda function to render a section of the image
-        auto render_section = [&](int start_row, int end_row) {
+        auto render_section = [&](int start_row, int end_row, std::mt19937 &gen) {
+            
+            std::uniform_real_distribution<double> dist(0.0, 1.0);
+
             for (int j = start_row; j < end_row; j++) {
                 for (int i = 0; i < image_width; i++) {
                     Color pixel_color(0, 0, 0);
                     // Calculate current pixel color
                     for (int sample = 0; sample < samples_per_pixel; sample++) {
-                        Ray r = get_Ray(i, j);
-                        pixel_color += ray_Color(r, max_depth, world, envmap);
+                        Ray r = get_Ray(i, j, gen, dist);
+                        pixel_color += ray_Color(r, max_depth, world, gen, dist, envmap);
                     }
 
                     // Convert the color to SDL format
@@ -155,7 +171,7 @@ public:
             int start_row = i * rows_per_thread;
             // Ensure the last thread covers any remaining rows
             int end_row = (i == num_threads - 1) ? image_height : (i + 1) * rows_per_thread;
-            threads.emplace_back(render_section, start_row, end_row);
+            threads.emplace_back(render_section, start_row, end_row, std::ref(generators[i]));
         }
 
         // Wait for all threads to complete
@@ -178,8 +194,6 @@ public:
         // Calculate direction camera is looking in
         Vec3 direction = unit_Vector(lookat - lookfrom);
         Vec3 right = unit_Vector(cross(direction, vup));
-        //printf("direction: %f, %f, %f\n", direction.x(), direction.y(), direction.z());
-        //printf("right: %f, %f, %f\n", right.x(), right.y(), right.z());
         
         // Move camera left / right relative to orientation
         if (move_by.x() != 0) {
@@ -199,49 +213,44 @@ public:
         //printf("lookfrom: %f, %f, %f\n\n\n", lookfrom.x(), lookfrom.y(), lookfrom.z());
     }
 
-    // TODO: NOT DONE YET
-    // There's still some unwanted behaviour when pitching up / down
+    
     void update_Camera_Direction(double delta_yaw, double delta_pitch) {
-        // Calculate direction camera is looking in
-        Vec3 direction = lookat - lookfrom;
+        // Define world up vector
+        const Vec3 WORLD_UP(0, 1, 0);
 
-        // Rotate around Y-axis for yaw (l-r rotation)
+        // Calculate current direction and right vector
+        Vec3 direction = unit_Vector(lookat - lookfrom);
+        Vec3 right = unit_Vector(cross(WORLD_UP, direction));
+        Vec3 up = unit_Vector(cross(direction, right));
+
+        // Apply yaw rotation around world up axis
         double cos_yaw = cos(delta_yaw);
         double sin_yaw = sin(delta_yaw);
-
-        // Apply rotation matrix
-        //
-        // [  cos yaw, 0, sin yaw ]
-        // |  0,       1, 0       |
-        // [ -sin yaw, 0, cos yaw ]
-        Vec3 rotated_dir_yaw = Vec3(
+        Vec3 yawed_direction = Vec3(
             cos_yaw * direction.x() + sin_yaw * direction.z(),
             direction.y(),
             -sin_yaw * direction.x() + cos_yaw * direction.z()
         );
 
-        // Rotate around right vector for pitch (up-down rotation)
-        Vec3 right = unit_Vector(cross(rotated_dir_yaw, vup));
+        // Recalculate right vector after yaw
+        right = unit_Vector(cross(WORLD_UP, yawed_direction));
+
+        // Apply pitch rotation around right vector
         double cos_pitch = cos(delta_pitch);
         double sin_pitch = sin(delta_pitch);
-
-        // Apply rotation matrix
-        //
-        // [  1,         0, 0          ]
-        // |  0, cos pitch, -sin pitch |
-        // [  0, sin pitch, cos pitch  ]
-        Vec3 rotated_dir_pit = Vec3(
-            rotated_dir_yaw.x(),
-            cos_pitch * rotated_dir_yaw.y() - sin_pitch * rotated_dir_yaw.z(),
-            sin_pitch * rotated_dir_yaw.y() + cos_pitch * rotated_dir_yaw.z()
+        Vec3 final_direction = Vec3(
+            cos_pitch * yawed_direction.x() + sin_pitch * (cross(right, yawed_direction)).x(),
+            cos_pitch * yawed_direction.y() + sin_pitch * (cross(right, yawed_direction)).y(),
+            cos_pitch * yawed_direction.z() + sin_pitch * (cross(right, yawed_direction)).z()
         );
 
-        lookat = lookfrom + rotated_dir_pit;
+        // Update lookat point
+        lookat = lookfrom + final_direction;
 
-        //printf("lookat: %f, %f, %f\n\n", lookat.x(), lookat.y(), lookat.z());
+        // Recalculate up vector
+        vup = unit_Vector(cross(final_direction, right));
     }
 
-    
 
 private:
     int image_height;           // Rendered image height
@@ -294,55 +303,36 @@ private:
     }
 
     // Returns the vector to a random point in the [-.5,-.5]-[+.5,+.5] unit square
-    Vec3 sample_Square() const {    
-        return Vec3(random_double() - 0.5, random_double() - 0.5, 0);
+    Vec3 pixel_Sample_Square(std::mt19937 &gen, std::uniform_real_distribution<double> &dist) const {    
+        double px = -0.5 + dist(gen);
+        double py = -0.5 + dist(gen);
+        return (px * pixel_delta_u) + (py * pixel_delta_v);
     }
 
-    Ray get_Ray(int i, int j) const {
-        // Construct a camera ray originating from the defocus disk and directed at randomly sampled
-        // point around the pixel location i, j
-
-        auto offset = sample_Square();
-        auto pixel_sample = pixel00_loc
-                            + ((i + offset.x()) * pixel_delta_u)
-                            + ((j + offset.y()) * pixel_delta_v);
+    Ray get_Ray(int i, int j, std::mt19937 gen, std::uniform_real_distribution<double> &dist) const {
         
-        auto ray_origin = (defocus_angle <= 0) ? center : defocus_Disk_Sample();
+        Point3 pixel_center = pixel00_loc + (i * pixel_delta_u) + (j * pixel_delta_v);
+
+        Point3 pixel_sample = pixel_center + pixel_Sample_Square(gen, dist);
+        
+        auto ray_origin = (defocus_angle <= 0) ? center : defocus_Disk_Sample(gen, dist);
         auto ray_direction = pixel_sample - ray_origin;
 
         return Ray(ray_origin, ray_direction);
     }
 
     // Returns a random point in the camera defocus disk
-    Point3 defocus_Disk_Sample() const {    
-        auto p = random_In_Unit_Disk();
+    Point3 defocus_Disk_Sample(std::mt19937 &gen, std::uniform_real_distribution<double> &dist) const {    
+        auto p = random_In_Unit_Disk(gen, dist);
         return center + (p[0] * defocus_disk_u) + (p[1] * defocus_disk_v);
     }
-
-    Ray get_Ray_Consistent(int i, int j, int samples) {    
-        // Construct a camera ray originating from the origin and directed at a consistent sampled
-        // point around the pixel location i, j based on the # of samples_per_pixel
-        Vec3 offset;
-        if (samples % 2 == 0) {
-            // Bottom left to top right
-            offset = Vec3(samples/samples_per_pixel - 0.5, samples/samples_per_pixel - 0.5, 0);
-        } else {
-            // Top left to bottom right
-            offset = Vec3(samples/samples_per_pixel - 0.5, -samples/samples_per_pixel + 0.5, 0);
-        }
-
-        offset = Vec3(samples/samples_per_pixel - 0.5, samples/samples_per_pixel - 0.5, 0);
-        auto pixel_sample = pixel00_loc
-                            + ((i + offset.x()) * pixel_delta_u)
-                            + ((j + offset.y()) * pixel_delta_v);
-
-        auto ray_origin = center;
-        auto ray_direction = pixel_sample - ray_origin;
-
-        return Ray(ray_origin, ray_direction);
-    }
-
-    Color ray_Color(const Ray& r, int depth, const Hittable& world, const EnvironmentMap* envmap = nullptr) const {
+    
+    Color ray_Color(const Ray& r, 
+                    int depth, 
+                    const Hittable& world, 
+                    std::mt19937 &gen, 
+                    std::uniform_real_distribution<double> &dist, 
+                    const EnvironmentMap* envmap = nullptr) const {
         // If we've exceeded the ray bounce limit, no more light is gathered
         if (depth <= 0) {
             return Color(0,0,0);
@@ -354,7 +344,7 @@ private:
             Ray scattered;
             Color attenuation;
             if (rec.mat->scatter(r, rec, attenuation, scattered)) {
-                return attenuation * ray_Color(scattered, depth-1, world, envmap);
+                return attenuation * ray_Color(scattered, depth-1, world, gen, dist, envmap);
             }
             return Color(0,0,0);
         }
