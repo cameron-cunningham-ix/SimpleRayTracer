@@ -45,9 +45,9 @@ public:
 
         // Calculate pixel color of image given index
         int index = (i + width*j) * channels;
-        double r = data[index] / 255.0;
-        double g = data[index + 1] / 255.0;
-        double b = data[index + 2] / 255.0;
+        double r = data[index] / 255.999;
+        double g = data[index + 1] / 255.999;
+        double b = data[index + 2] / 255.999;
 
         return Color(r, g, b);
     }

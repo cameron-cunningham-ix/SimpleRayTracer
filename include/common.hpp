@@ -5,6 +5,7 @@
 #include <iostream>
 #include <limits>
 #include <memory>
+#include <random>
 
 // C++ Std Usings
 using std::make_shared;
