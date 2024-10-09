@@ -7,14 +7,6 @@
 *	Peter Shirley, Trevor David Black, Steve Hollasch
 *	Link: https://raytracing.github.io/
 *
-*   BRANCH: MAJOR REFACTOR
-*   FOCUS: 1. INCLUDE PROPER DOCUMENTATION FOR EVERYTHING
-*   2. REFACTOR THREADING
-*       - RENDERING STARTING IN MAIN THREAD AND CREATING FUTURES
-*       MAY BE CAUSING THE SLOWDOWN IN SINGLE RENDER OPTION
-*       - SWITCH TO STD::THREAD
-*
-*
 */
 #define SDL_MAIN_HANDLED    // Disables SDL's handling of main
 #include "common.hpp"
